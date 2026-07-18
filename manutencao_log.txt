@@ -1,0 +1,2489 @@
+=======================================================
+ LOG DE MANUTENÇÃO DO SISTEMA
+ Criado em: 15/07/2026 17:51:08
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+
+=======================================================
+ Nova sessão: 15/07/2026 17:57:21
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+
+=======================================================
+ Nova sessão: 15/07/2026 18:01:02
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        53185511424
+[DEBUG ESPAÇO]   GB (valor completo): 49.532867431640625
+[DEBUG ESPAÇO]   round(gb, 1):        49.5
+[DEBUG ESPAÇO]   truncado (floor):    49.5
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        53184303104
+[DEBUG ESPAÇO]   GB (valor completo): 49.531742095947266
+[DEBUG ESPAÇO]   round(gb, 1):        49.5
+[DEBUG ESPAÇO]   truncado (floor):    49.5
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 18:04:35
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        53180407808
+[DEBUG ESPAÇO]   GB (valor completo): 49.528114318847656
+[DEBUG ESPAÇO]   round(gb, 1):        49.5
+[DEBUG ESPAÇO]   truncado (floor):    49.5
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+[SESSAO] Execução em lote iniciada em 15/07/2026 18:05:19 - Tarefas: ['dism']
+[DISM] Iniciado em 15/07/2026 18:05:19
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        51118714880
+[DEBUG ESPAÇO]   GB (valor completo): 47.60801315307617
+[DEBUG ESPAÇO]   round(gb, 1):        47.6
+[DEBUG ESPAÇO]   truncado (floor):    47.6
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        51109212160
+[DEBUG ESPAÇO]   GB (valor completo): 47.59916305541992
+[DEBUG ESPAÇO]   round(gb, 1):        47.6
+[DEBUG ESPAÇO]   truncado (floor):    47.5
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 18:30:24
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 15/07/2026 18:31:08 - Tarefas: ['sfc']
+[SFC] Iniciado em 15/07/2026 18:31:08
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        51000508416
+[DEBUG ESPAÇO]   GB (valor completo): 47.4979248046875
+[DEBUG ESPAÇO]   round(gb, 1):        47.5
+[DEBUG ESPAÇO]   truncado (floor):    47.4
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        50674630656
+[DEBUG ESPAÇO]   GB (valor completo): 47.194427490234375
+[DEBUG ESPAÇO]   round(gb, 1):        47.2
+[DEBUG ESPAÇO]   truncado (floor):    47.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        50663632896
+[DEBUG ESPAÇO]   GB (valor completo): 47.18418502807617
+[DEBUG ESPAÇO]   round(gb, 1):        47.2
+[DEBUG ESPAÇO]   truncado (floor):    47.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        49627766784
+[DEBUG ESPAÇO]   GB (valor completo): 46.219459533691406
+[DEBUG ESPAÇO]   round(gb, 1):        46.2
+[DEBUG ESPAÇO]   truncado (floor):    46.2
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        49613840384
+[DEBUG ESPAÇO]   GB (valor completo): 46.20648956298828
+[DEBUG ESPAÇO]   round(gb, 1):        46.2
+[DEBUG ESPAÇO]   truncado (floor):    46.2
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 18:41:24
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 15/07/2026 18:41:34 - Tarefas: ['temp']
+[TEMP] Iniciado em 15/07/2026 18:41:34
+[TEMP] Pasta usuário limpa: C:\Users\Rafae\AppData\Local\Temp (18 removidos, 25 ignorados)
+[TEMP] Pasta sistema limpa: C:\WINDOWS\Temp (9 removidos, 1 ignorados)
+[TEMP] SUCESSO - Concluído em 15/07/2026 18:41:35
+[SESSAO] Execução em lote finalizada em 15/07/2026 18:41:35
+=======================================================
+[SESSAO] Execução em lote iniciada em 15/07/2026 18:41:48 - Tarefas: ['chkdsk']
+[CHKDSK] Iniciado em 15/07/2026 18:41:48 - Disco: SSD
+[CHKDSK] SSD - Agendando com /f apenas
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        49828450304
+[DEBUG ESPAÇO]   GB (valor completo): 46.4063606262207
+[DEBUG ESPAÇO]   round(gb, 1):        46.4
+[DEBUG ESPAÇO]   truncado (floor):    46.4
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        49831374848
+[DEBUG ESPAÇO]   GB (valor completo): 46.40908432006836
+[DEBUG ESPAÇO]   round(gb, 1):        46.4
+[DEBUG ESPAÇO]   truncado (floor):    46.4
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 18:47:03
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 15/07/2026 18:47:20 - Tarefas: ['dism']
+[DISM] Iniciado em 15/07/2026 18:47:20
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        49864933376
+[DEBUG ESPAÇO]   GB (valor completo): 46.440338134765625
+[DEBUG ESPAÇO]   round(gb, 1):        46.4
+[DEBUG ESPAÇO]   truncado (floor):    46.4
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        49857978368
+[DEBUG ESPAÇO]   GB (valor completo): 46.433860778808594
+[DEBUG ESPAÇO]   round(gb, 1):        46.4
+[DEBUG ESPAÇO]   truncado (floor):    46.4
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        49855111168
+[DEBUG ESPAÇO]   GB (valor completo): 46.431190490722656
+[DEBUG ESPAÇO]   round(gb, 1):        46.4
+[DEBUG ESPAÇO]   truncado (floor):    46.4
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        47578120192
+[DEBUG ESPAÇO]   GB (valor completo): 44.310577392578125
+[DEBUG ESPAÇO]   round(gb, 1):        44.3
+[DEBUG ESPAÇO]   truncado (floor):    44.3
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        47571689472
+[DEBUG ESPAÇO]   GB (valor completo): 44.304588317871094
+[DEBUG ESPAÇO]   round(gb, 1):        44.3
+[DEBUG ESPAÇO]   truncado (floor):    44.3
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 19:03:19
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        47373242368
+[DEBUG ESPAÇO]   GB (valor completo): 44.11977005004883
+[DEBUG ESPAÇO]   round(gb, 1):        44.1
+[DEBUG ESPAÇO]   truncado (floor):    44.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        46326484992
+[DEBUG ESPAÇO]   GB (valor completo): 43.144901275634766
+[DEBUG ESPAÇO]   round(gb, 1):        43.1
+[DEBUG ESPAÇO]   truncado (floor):    43.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        46323671040
+[DEBUG ESPAÇO]   GB (valor completo): 43.14228057861328
+[DEBUG ESPAÇO]   round(gb, 1):        43.1
+[DEBUG ESPAÇO]   truncado (floor):    43.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 19:12:17
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        47910236160
+[DEBUG ESPAÇO]   GB (valor completo): 44.6198844909668
+[DEBUG ESPAÇO]   round(gb, 1):        44.6
+[DEBUG ESPAÇO]   truncado (floor):    44.6
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        47922577408
+[DEBUG ESPAÇO]   GB (valor completo): 44.631378173828125
+[DEBUG ESPAÇO]   round(gb, 1):        44.6
+[DEBUG ESPAÇO]   truncado (floor):    44.6
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 19:22:45
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 15/07/2026 19:23:22 - Tarefas: ['temp']
+[TEMP] Iniciado em 15/07/2026 19:23:22
+[TEMP] Pasta usuário limpa: C:\Users\Rafae\AppData\Local\Temp (5 removidos, 25 ignorados)
+[TEMP] Pasta sistema limpa: C:\WINDOWS\Temp (4 removidos, 1 ignorados)
+[TEMP] SUCESSO - Concluído em 15/07/2026 19:23:23
+[SESSAO] Execução em lote finalizada em 15/07/2026 19:23:24
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48656490496
+[DEBUG ESPAÇO]   GB (valor completo): 45.31488800048828
+[DEBUG ESPAÇO]   round(gb, 1):        45.3
+[DEBUG ESPAÇO]   truncado (floor):    45.3
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52930883584
+[DEBUG ESPAÇO]   GB (valor completo): 49.29572677612305
+[DEBUG ESPAÇO]   round(gb, 1):        49.3
+[DEBUG ESPAÇO]   truncado (floor):    49.2
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52926357504
+[DEBUG ESPAÇO]   GB (valor completo): 49.29151153564453
+[DEBUG ESPAÇO]   round(gb, 1):        49.3
+[DEBUG ESPAÇO]   truncado (floor):    49.2
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 19:36:00
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        47754240000
+[DEBUG ESPAÇO]   GB (valor completo): 44.47460174560547
+[DEBUG ESPAÇO]   round(gb, 1):        44.5
+[DEBUG ESPAÇO]   truncado (floor):    44.4
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        47753027584
+[DEBUG ESPAÇO]   GB (valor completo): 44.473472595214844
+[DEBUG ESPAÇO]   round(gb, 1):        44.5
+[DEBUG ESPAÇO]   truncado (floor):    44.4
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 19:58:17
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 15/07/2026 19:58:35 - Tarefas: ['temp']
+[TEMP] Iniciado em 15/07/2026 19:58:35
+[TEMP] Pasta usuário limpa: C:\Users\Rafae\AppData\Local\Temp (16 removidos, 28 ignorados)
+[TEMP] Pasta sistema limpa: C:\WINDOWS\Temp (6 removidos, 1 ignorados)
+[TEMP] SUCESSO - Concluído em 15/07/2026 19:58:35
+[SESSAO] Execução em lote finalizada em 15/07/2026 19:58:35
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        47886020608
+[DEBUG ESPAÇO]   GB (valor completo): 44.59733200073242
+[DEBUG ESPAÇO]   round(gb, 1):        44.6
+[DEBUG ESPAÇO]   truncado (floor):    44.5
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        47893360640
+[DEBUG ESPAÇO]   GB (valor completo): 44.60416793823242
+[DEBUG ESPAÇO]   round(gb, 1):        44.6
+[DEBUG ESPAÇO]   truncado (floor):    44.6
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 20:00:00
+=======================================================
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        46472773632
+[DEBUG ESPAÇO]   GB (valor completo): 43.28114318847656
+[DEBUG ESPAÇO]   round(gb, 1):        43.3
+[DEBUG ESPAÇO]   truncado (floor):    43.2
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        46452207616
+[DEBUG ESPAÇO]   GB (valor completo): 43.26198959350586
+[DEBUG ESPAÇO]   round(gb, 1):        43.3
+[DEBUG ESPAÇO]   truncado (floor):    43.2
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 20:16:37
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 15/07/2026 20:16:48 - Tarefas: ['sfc']
+[SFC] Iniciado em 15/07/2026 20:16:48
+[SFC]  
+[SFC]  
+[SFC]  I n i c i a n d o   v e r i f i c a ç ã o   d e   a r q u i v o s .   O   p r o c e s s o   l e v a r á   a l g u n s   m i n u t o s   p a r a   s e r   c o n c l u í d o . 
+[SFC]  
+[SFC]  
+[SFC]  
+[SFC]  
+[SFC]  
+[SFC]  I n i c i a n d o   f a s e   d e   v e r i f i c a ç ã o   d e   v e r i f i c a ç ã o   d o   s i s t e m a . 
+[SFC]  
+[SFC]  
+[SFC]  
+[SFC]  V e r i f i c a ç ã o   0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 8 %   c o n c l u í d a . 
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48490311680
+[DEBUG ESPAÇO]   GB (valor completo): 45.16012191772461
+[DEBUG ESPAÇO]   round(gb, 1):        45.2
+[DEBUG ESPAÇO]   truncado (floor):    45.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48489185280
+[DEBUG ESPAÇO]   GB (valor completo): 45.15907287597656
+[DEBUG ESPAÇO]   round(gb, 1):        45.2
+[DEBUG ESPAÇO]   truncado (floor):    45.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 22:48:57
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 15/07/2026 22:49:05 - Tarefas: ['sfc']
+[SFC] Iniciado em 15/07/2026 22:49:05
+[SFC]  
+[SFC]  
+[SFC]  I n i c i a n d o   v e r i f i c a ç ã o   d e   a r q u i v o s .   O   p r o c e s s o   l e v a r á   a l g u n s   m i n u t o s   p a r a   s e r   c o n c l u í d o . 
+[SFC]  
+[SFC]  
+[SFC]  
+[SFC]  
+[SFC]  
+[SFC]  I n i c i a n d o   f a s e   d e   v e r i f i c a ç ã o   d e   v e r i f i c a ç ã o   d o   s i s t e m a . 
+[SFC]  
+[SFC]  
+[SFC]  
+[SFC]  V e r i f i c a ç ã o   0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 0 0 %   c o n c l u í d a . 
+[SFC]  
+[SFC]  
+[SFC]  
+[SFC]  
+[SFC]  A   P r o t e ç ã o   d e   R e c u r s o s   d o   W i n d o w s   n ã o   e n c o n t r o u   n e n h u m a   v i o l a ç ã o   d e   i n t e g r i d a d e . 
+[SFC]  
+[SFC]  
+[SFC]  
+[SFC] SUCESSO - Código 0 - Sem corrupção - 15/07/2026 22:52:54
+[SESSAO] Execução em lote finalizada em 15/07/2026 22:52:54
+=======================================================
+[SESSAO] Execução em lote iniciada em 15/07/2026 22:54:03 - Tarefas: ['dns', 'temp', 'recycle']
+[DNS] Iniciado em 15/07/2026 22:54:03
+
+Configura‡Æo de IP do Windows
+
+Libera‡Æo do Cache do DNS Resolver bem-sucedida.
+
+[DNS] SUCESSO - Concluído em 15/07/2026 22:54:03
+[TEMP] Iniciado em 15/07/2026 22:54:03
+[TEMP] Pasta usuário limpa: C:\Users\Rafae\AppData\Local\Temp (12 removidos, 24 ignorados)
+[TEMP] Pasta sistema limpa: C:\WINDOWS\Temp (10 removidos, 3 ignorados)
+[TEMP] SUCESSO - Concluído em 15/07/2026 22:54:04
+[LIXEIRA] Iniciado em 15/07/2026 22:54:04
+[LIXEIRA] SUCESSO - Concluído em 15/07/2026 22:54:04
+[SESSAO] Execução em lote finalizada em 15/07/2026 22:54:04
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48462503936
+[DEBUG ESPAÇO]   GB (valor completo): 45.13422393798828
+[DEBUG ESPAÇO]   round(gb, 1):        45.1
+[DEBUG ESPAÇO]   truncado (floor):    45.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48461565952
+[DEBUG ESPAÇO]   GB (valor completo): 45.13335037231445
+[DEBUG ESPAÇO]   round(gb, 1):        45.1
+[DEBUG ESPAÇO]   truncado (floor):    45.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 23:13:20
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 15/07/2026 23:13:36 - Tarefas: ['lab_rapido']
+[SESSAO] Execução em lote finalizada em 15/07/2026 23:13:37
+=======================================================
+[SESSAO] Execução em lote iniciada em 15/07/2026 23:13:42 - Tarefas: ['lab_medio', 'lab_longo']
+[SESSAO] Execução em lote finalizada em 15/07/2026 23:15:58
+=======================================================
+[SESSAO] Execução em lote iniciada em 15/07/2026 23:17:02 - Tarefas: ['lab_erro', 'lab_aviso', 'lab_reinicializacao', 'lab_aleatorio']
+[ERRO INESPERADO] Erro simulado pelo Laboratório para teste de interface
+[SESSAO] Execução em lote finalizada em 15/07/2026 23:17:22
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48447778816
+[DEBUG ESPAÇO]   GB (valor completo): 45.12051010131836
+[DEBUG ESPAÇO]   round(gb, 1):        45.1
+[DEBUG ESPAÇO]   truncado (floor):    45.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48447234048
+[DEBUG ESPAÇO]   GB (valor completo): 45.12000274658203
+[DEBUG ESPAÇO]   round(gb, 1):        45.1
+[DEBUG ESPAÇO]   truncado (floor):    45.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 23:24:32
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 15/07/2026 23:25:32 - Tarefas: ['lab_logs', 'lab_indeterminado', 'lab_erro', 'lab_aviso', 'lab_reinicializacao', 'lab_aleatorio']
+[ERRO INESPERADO] 'lab_logs'
+[ERRO INESPERADO] 'lab_indeterminado'
+[ERRO INESPERADO] 'lab_erro'
+[ERRO INESPERADO] 'lab_aviso'
+[ERRO INESPERADO] 'lab_reinicializacao'
+[ERRO INESPERADO] 'lab_aleatorio'
+[SESSAO] Execução em lote finalizada em 15/07/2026 23:25:32
+=======================================================
+[SESSAO] Execução em lote iniciada em 15/07/2026 23:25:52 - Tarefas: ['lab_erro', 'lab_aviso']
+[ERRO INESPERADO] 'lab_erro'
+[ERRO INESPERADO] 'lab_aviso'
+[SESSAO] Execução em lote finalizada em 15/07/2026 23:25:52
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48439906304
+[DEBUG ESPAÇO]   GB (valor completo): 45.11317825317383
+[DEBUG ESPAÇO]   round(gb, 1):        45.1
+[DEBUG ESPAÇO]   truncado (floor):    45.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48439410688
+[DEBUG ESPAÇO]   GB (valor completo): 45.11271667480469
+[DEBUG ESPAÇO]   round(gb, 1):        45.1
+[DEBUG ESPAÇO]   truncado (floor):    45.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 23:28:51
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 15/07/2026 23:29:02 - Tarefas: ['lab_erro', 'lab_aviso', 'lab_reinicializacao', 'lab_aleatorio']
+[ERRO INESPERADO] Erro simulado pelo Laboratório para teste de interface
+[SESSAO] Execução em lote finalizada em 15/07/2026 23:29:23
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48449953792
+[DEBUG ESPAÇO]   GB (valor completo): 45.122535705566406
+[DEBUG ESPAÇO]   round(gb, 1):        45.1
+[DEBUG ESPAÇO]   truncado (floor):    45.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48449474560
+[DEBUG ESPAÇO]   GB (valor completo): 45.12208938598633
+[DEBUG ESPAÇO]   round(gb, 1):        45.1
+[DEBUG ESPAÇO]   truncado (floor):    45.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 23:31:38
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 15/07/2026 23:34:35 - Tarefas: ['lab_logs']
+[SESSAO] Execução em lote finalizada em 15/07/2026 23:34:46
+=======================================================
+[SESSAO] Execução em lote iniciada em 15/07/2026 23:35:04 - Tarefas: ['lab_indeterminado']
+[SESSAO] Execução em lote finalizada em 15/07/2026 23:35:24
+=======================================================
+[SESSAO] Execução em lote iniciada em 15/07/2026 23:35:27 - Tarefas: ['lab_erro', 'lab_aviso', 'lab_reinicializacao']
+[ERRO INESPERADO] Erro simulado pelo Laboratório para teste de interface
+[SESSAO] Execução em lote finalizada em 15/07/2026 23:35:37
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48433467392
+[DEBUG ESPAÇO]   GB (valor completo): 45.107181549072266
+[DEBUG ESPAÇO]   round(gb, 1):        45.1
+[DEBUG ESPAÇO]   truncado (floor):    45.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48432979968
+[DEBUG ESPAÇO]   GB (valor completo): 45.106727600097656
+[DEBUG ESPAÇO]   round(gb, 1):        45.1
+[DEBUG ESPAÇO]   truncado (floor):    45.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 15/07/2026 23:43:13
+=======================================================
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48432910336
+[DEBUG ESPAÇO]   GB (valor completo): 45.10666275024414
+[DEBUG ESPAÇO]   round(gb, 1):        45.1
+[DEBUG ESPAÇO]   truncado (floor):    45.1
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 15/07/2026 23:43:25 - Tarefas: ['sfc']
+[SFC] Iniciado em 15/07/2026 23:43:25
+[SFC]  
+[SFC]  I n i c i a n d o   v e r i f i c a ç ã o   d e   a r q u i v o s .   O   p r o c e s s o   l e v a r á   a l g u n s   m i n u t o s   p a r a   s e r   c o n c l u í d o . 
+[SFC]  
+[SFC]  I n i c i a n d o   f a s e   d e   v e r i f i c a ç ã o   d e   v e r i f i c a ç ã o   d o   s i s t e m a . 
+[SFC]  
+[SFC]  V e r i f i c a ç ã o   0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 0 0 %   c o n c l u í d a . 
+[SFC]  
+[SFC]  A   P r o t e ç ã o   d e   R e c u r s o s   d o   W i n d o w s   n ã o   e n c o n t r o u   n e n h u m a   v i o l a ç ã o   d e   i n t e g r i d a d e . 
+[SFC]  
+[SFC] SUCESSO - Código 0 - Sem corrupção - 15/07/2026 23:46:54
+[SESSAO] Execução em lote finalizada em 15/07/2026 23:46:54
+=======================================================
+[SESSAO] Execução em lote iniciada em 15/07/2026 23:47:55 - Tarefas: ['lab_erro', 'lab_aviso', 'lab_reinicializacao', 'lab_aleatorio']
+[ERRO INESPERADO] Erro simulado pelo Laboratório para teste de interface
+[SESSAO] Execução em lote finalizada em 15/07/2026 23:48:30
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48414400512
+[DEBUG ESPAÇO]   GB (valor completo): 45.08942413330078
+[DEBUG ESPAÇO]   round(gb, 1):        45.1
+[DEBUG ESPAÇO]   truncado (floor):    45.0
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        48413360128
+[DEBUG ESPAÇO]   GB (valor completo): 45.08845520019531
+[DEBUG ESPAÇO]   round(gb, 1):        45.1
+[DEBUG ESPAÇO]   truncado (floor):    45.0
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 16/07/2026 00:06:11
+=======================================================
+
+[SESSAO] Execução em lote iniciada em 16/07/2026 00:06:15 - Tarefas: ['sfc']
+[SFC] Iniciado em 16/07/2026 00:06:15
+[INFO] Tipo de disco detectado: SSD
+[SFC]  
+[SFC]  I n i c i a n d o   v e r i f i c a ç ã o   d e   a r q u i v o s .   O   p r o c e s s o   l e v a r á   a l g u n s   m i n u t o s   p a r a   s e r   c o n c l u í d o . 
+[SFC]  
+[SFC]  I n i c i a n d o   f a s e   d e   v e r i f i c a ç ã o   d e   v e r i f i c a ç ã o   d o   s i s t e m a . 
+[SFC]  
+[SFC]  V e r i f i c a ç ã o   0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 0 0 %   c o n c l u í d a . 
+[SFC]  
+[SFC]  A   P r o t e ç ã o   d e   R e c u r s o s   d o   W i n d o w s   n ã o   e n c o n t r o u   n e n h u m a   v i o l a ç ã o   d e   i n t e g r i d a d e . 
+[SFC]  
+[SFC] SUCESSO - Código 0 - Sem corrupção - 16/07/2026 00:11:09
+[SESSAO] Execução em lote finalizada em 16/07/2026 00:11:09
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        49412825088
+[DEBUG ESPAÇO]   GB (valor completo): 46.01927947998047
+[DEBUG ESPAÇO]   round(gb, 1):        46.0
+[DEBUG ESPAÇO]   truncado (floor):    46.0
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        49412825088
+[DEBUG ESPAÇO]   GB (valor completo): 46.01927947998047
+[DEBUG ESPAÇO]   round(gb, 1):        46.0
+[DEBUG ESPAÇO]   truncado (floor):    46.0
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        49258094592
+[DEBUG ESPAÇO]   GB (valor completo): 45.87517547607422
+[DEBUG ESPAÇO]   round(gb, 1):        45.9
+[DEBUG ESPAÇO]   truncado (floor):    45.8
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        49250918400
+[DEBUG ESPAÇO]   GB (valor completo): 45.868492126464844
+[DEBUG ESPAÇO]   round(gb, 1):        45.9
+[DEBUG ESPAÇO]   truncado (floor):    45.8
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 16/07/2026 10:52:38
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 16/07/2026 10:53:38 - Tarefas: ['sfc']
+[SFC] Iniciado em 16/07/2026 10:53:38
+[SFC]  
+[SFC]  I n i c i a n d o   v e r i f i c a ç ã o   d e   a r q u i v o s .   O   p r o c e s s o   l e v a r á   a l g u n s   m i n u t o s   p a r a   s e r   c o n c l u í d o . 
+[SFC]  
+[SFC]  I n i c i a n d o   f a s e   d e   v e r i f i c a ç ã o   d e   v e r i f i c a ç ã o   d o   s i s t e m a . 
+[SFC]  
+[SFC]  V e r i f i c a ç ã o   0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 0 0 %   c o n c l u í d a . 
+[SFC]  
+[SFC]  A   P r o t e ç ã o   d e   R e c u r s o s   d o   W i n d o w s   n ã o   e n c o n t r o u   n e n h u m a   v i o l a ç ã o   d e   i n t e g r i d a d e . 
+[SFC]  
+[SFC] SUCESSO - Código 0 - Sem corrupção - 16/07/2026 10:57:28
+[SESSAO] Execução em lote finalizada em 16/07/2026 10:57:28
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        49284345856
+[DEBUG ESPAÇO]   GB (valor completo): 45.89962387084961
+[DEBUG ESPAÇO]   round(gb, 1):        45.9
+[DEBUG ESPAÇO]   truncado (floor):    45.8
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        49283747840
+[DEBUG ESPAÇO]   GB (valor completo): 45.89906692504883
+[DEBUG ESPAÇO]   round(gb, 1):        45.9
+[DEBUG ESPAÇO]   truncado (floor):    45.8
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 16/07/2026 11:23:31
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 16/07/2026 11:23:45 - Tarefas: ['sfc']
+[SFC] Iniciado em 16/07/2026 11:23:45
+[SFC]  
+[SFC]  I n i c i a n d o   v e r i f i c a ç ã o   d e   a r q u i v o s .   O   p r o c e s s o   l e v a r á   a l g u n s   m i n u t o s   p a r a   s e r   c o n c l u í d o . 
+[SFC]  
+[SFC]  I n i c i a n d o   f a s e   d e   v e r i f i c a ç ã o   d e   v e r i f i c a ç ã o   d o   s i s t e m a . 
+[SFC]  
+[SFC]  V e r i f i c a ç ã o   0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   2 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   3 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   4 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   5 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   6 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   7 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   8 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 0 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 1 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 2 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 3 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 4 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 5 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 6 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 7 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 8 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   9 9 %   c o n c l u í d a . 
+[SFC]  V e r i f i c a ç ã o   1 0 0 %   c o n c l u í d a . 
+[SFC]  
+[SFC]  A   P r o t e ç ã o   d e   R e c u r s o s   d o   W i n d o w s   n ã o   e n c o n t r o u   n e n h u m a   v i o l a ç ã o   d e   i n t e g r i d a d e . 
+[SFC]  
+[SFC] SUCESSO - Código 0 - Sem corrupção - 16/07/2026 11:27:53
+[SESSAO] Execução em lote finalizada em 16/07/2026 11:27:53
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52341694464
+[DEBUG ESPAÇO]   GB (valor completo): 48.74700164794922
+[DEBUG ESPAÇO]   round(gb, 1):        48.7
+[DEBUG ESPAÇO]   truncado (floor):    48.7
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52337582080
+[DEBUG ESPAÇO]   GB (valor completo): 48.74317169189453
+[DEBUG ESPAÇO]   round(gb, 1):        48.7
+[DEBUG ESPAÇO]   truncado (floor):    48.7
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 16/07/2026 16:56:01
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 16/07/2026 16:56:17 - Tarefas: ['sfc']
+[SFC] Iniciado em 16/07/2026 16:56:17
+[SFC]  
+[SFC]  I n i c i a n d o   v e r i f i c a þ Ò o   d e   a r q u i v o s .   O   p r o c e s s o   l e v a r ß   a l g u n s   m i n u t o s   p a r a   s e r   c o n c l u Ý d o . 
+[SFC]  
+[SFC]  I n i c i a n d o   f a s e   d e   v e r i f i c a þ Ò o   d e   v e r i f i c a þ Ò o   d o   s i s t e m a . 
+[SFC]  
+[SFC]  V e r i f i c a þ Ò o   0 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   1 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   2 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   3 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   4 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   5 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   6 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   7 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   8 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   9 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   1 0 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   1 1 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   1 2 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   1 3 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   1 4 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   1 5 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   1 6 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   1 7 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   1 8 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   1 9 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   2 0 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   2 1 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   2 2 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   2 3 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   2 4 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   2 5 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   2 6 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   2 7 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   2 8 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   2 9 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   3 0 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   3 1 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   3 2 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   3 3 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   3 4 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   3 5 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   3 6 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   3 7 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   3 8 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   3 9 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   4 0 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   4 1 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   4 2 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   4 3 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   4 4 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   4 5 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   4 6 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   4 7 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   4 8 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   4 9 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   5 0 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   5 1 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   5 2 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   5 3 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   5 4 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   5 5 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   5 6 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   5 7 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   5 8 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   5 9 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   6 0 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   6 1 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   6 2 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   6 3 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   6 4 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   6 5 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   6 6 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   6 7 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   6 8 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   6 9 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   7 0 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   7 1 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   7 2 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   7 3 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   7 4 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   7 5 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   7 6 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   7 7 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   7 8 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   7 9 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   8 0 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   8 1 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   8 2 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   8 3 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   8 4 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   8 5 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   8 6 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   8 7 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   8 8 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   8 9 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   9 0 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   9 1 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   9 2 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   9 3 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   9 4 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   9 5 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   9 6 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   9 7 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   9 8 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   9 9 %   c o n c l u Ý d a . 
+[SFC]  V e r i f i c a þ Ò o   1 0 0 %   c o n c l u Ý d a . 
+[SFC]  
+[SFC]  A   P r o t e þ Ò o   d e   R e c u r s o s   d o   W i n d o w s   n Ò o   e n c o n t r o u   n e n h u m a   v i o l a þ Ò o   d e   i n t e g r i d a d e . 
+[SFC]  
+[SFC] SUCESSO - Código 0 - Sem corrupção - 16/07/2026 17:00:56
+[SESSAO] Execução em lote finalizada em 16/07/2026 17:00:56
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52324970496
+[DEBUG ESPAÇO]   GB (valor completo): 48.73142623901367
+[DEBUG ESPAÇO]   round(gb, 1):        48.7
+[DEBUG ESPAÇO]   truncado (floor):    48.7
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52324306944
+[DEBUG ESPAÇO]   GB (valor completo): 48.73080825805664
+[DEBUG ESPAÇO]   round(gb, 1):        48.7
+[DEBUG ESPAÇO]   truncado (floor):    48.7
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 16/07/2026 17:06:59
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 16/07/2026 17:07:07 - Tarefas: ['sfc']
+[SFC] Iniciado em 16/07/2026 17:07:07
+[SFC] SUCESSO - Código 0 - Sem corrupção - 16/07/2026 17:10:30
+[SESSAO] Execução em lote finalizada em 16/07/2026 17:10:30
+=======================================================
+[SESSAO] Execução em lote iniciada em 16/07/2026 17:20:40 - Tarefas: ['lab_aviso', 'lab_reinicializacao', 'lab_aleatorio']
+[SESSAO] Execução em lote finalizada em 16/07/2026 17:21:14
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52182880256
+[DEBUG ESPAÇO]   GB (valor completo): 48.59909439086914
+[DEBUG ESPAÇO]   round(gb, 1):        48.6
+[DEBUG ESPAÇO]   truncado (floor):    48.5
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52182482944
+[DEBUG ESPAÇO]   GB (valor completo): 48.598724365234375
+[DEBUG ESPAÇO]   round(gb, 1):        48.6
+[DEBUG ESPAÇO]   truncado (floor):    48.5
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 16/07/2026 18:22:15
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 16/07/2026 18:22:23 - Tarefas: ['sfc']
+[SFC] Iniciado em 16/07/2026 18:22:23
+[TERMINAL_MANAGER] Novo CMD criado - PID 3832 - Titulo: Assistente de Manutencao - Terminal Gerenciado [fb80a527]
+[TERMINAL_MANAGER] Enviando comando (PID 3832): sfc /scannow
+[SFC] TERMINAL INDISPONIVEL - O Prompt de Comando foi fechado (ou encerrou) enquanto um comando ainda estava em execucao; nao e possivel confirmar seu termino real nem seu codigo de saida. - 16/07/2026 18:47:27
+[SESSAO] Execução em lote finalizada em 16/07/2026 18:47:27
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52203261952
+[DEBUG ESPAÇO]   GB (valor completo): 48.61807632446289
+[DEBUG ESPAÇO]   round(gb, 1):        48.6
+[DEBUG ESPAÇO]   truncado (floor):    48.6
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52201357312
+[DEBUG ESPAÇO]   GB (valor completo): 48.616302490234375
+[DEBUG ESPAÇO]   round(gb, 1):        48.6
+[DEBUG ESPAÇO]   truncado (floor):    48.6
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 16/07/2026 19:10:00
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 16/07/2026 19:10:10 - Tarefas: ['lab_rapido']
+[SESSAO] Execução em lote finalizada em 16/07/2026 19:10:11
+=======================================================
+[SESSAO] Execução em lote iniciada em 16/07/2026 19:10:19 - Tarefas: ['sfc']
+[SFC] Iniciado em 16/07/2026 19:10:19
+[TERMINAL_MANAGER] Novo CMD criado - PID 16284 - Titulo: Assistente de Manutencao - Terminal Gerenciado [02cadda4]
+[TERMINAL_MANAGER] Enviando comando (PID 16284): sfc /scannow
+[TERMINAL_MANAGER] Comando concluido - codigo 0: sfc /scannow
+[SFC] SUCESSO - Código 0 - Sem corrupção - 16/07/2026 19:16:11
+[SESSAO] Execução em lote finalizada em 16/07/2026 19:16:11
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52191592448
+[DEBUG ESPAÇO]   GB (valor completo): 48.607208251953125
+[DEBUG ESPAÇO]   round(gb, 1):        48.6
+[DEBUG ESPAÇO]   truncado (floor):    48.6
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52191141888
+[DEBUG ESPAÇO]   GB (valor completo): 48.606788635253906
+[DEBUG ESPAÇO]   round(gb, 1):        48.6
+[DEBUG ESPAÇO]   truncado (floor):    48.6
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 16/07/2026 19:17:20
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 16/07/2026 19:18:05 - Tarefas: ['lab_erro', 'lab_aviso', 'lab_reinicializacao', 'lab_aleatorio']
+[TERMINAL_MANAGER] Novo CMD criado - PID 4120 - Titulo: Assistente de Manutencao - Terminal Gerenciado [58e6059a]
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Teste de erro iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de erro iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 1/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 1/20
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 2/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 2/20
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 3/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 3/20
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 4/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 4/20
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 5/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 5/20
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 6/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 6/20
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 7/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 7/20
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 8/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 8/20
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 9/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 9/20
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 10/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 10/20
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 11/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 11/20
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 12/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 12/20
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 13/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 13/20
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 14/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 14/20
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo ERRO: falha simulada no ponto de falha controlado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo ERRO: falha simulada no ponto de falha controlado
+[ERRO INESPERADO] Erro simulado pelo Laboratório para teste de interface
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Teste de aviso iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de aviso iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: alguns arquivos foram ignorados na etapa 5
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: alguns arquivos foram ignorados na etapa 5
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: alguns arquivos foram ignorados na etapa 10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: alguns arquivos foram ignorados na etapa 10
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Teste de aviso concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de aviso concluido
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Teste de reinicializacao iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de reinicializacao iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 1/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 1/8
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 2/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 2/8
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 3/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 3/8
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 4/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 4/8
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 5/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 5/8
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 6/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 6/8
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 7/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 7/8
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Etapa 8/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 8/8
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: reinicializacao necessaria (simulado, nenhum reinicio real ocorrera)
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: reinicializacao necessaria (simulado, nenhum reinicio real ocorrera)
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Teste aleatorio iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste aleatorio iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: evento aleatorio de aviso em 0%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 0%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Evento aleatorio de log em 0%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 0%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Evento aleatorio de log em 11%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 11%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: evento aleatorio de aviso em 11%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 11%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: evento aleatorio de aviso em 11%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 11%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Evento aleatorio de log em 11%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 11%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: evento aleatorio de aviso em 11%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 11%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: evento aleatorio de aviso em 11%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 11%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Evento aleatorio de log em 11%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 11%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Evento aleatorio de log em 19%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 19%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Evento aleatorio de log em 19%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 19%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: evento aleatorio de aviso em 19%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 19%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: evento aleatorio de aviso em 61%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 61%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Evento aleatorio de log em 61%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 61%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: evento aleatorio de aviso em 61%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 61%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: evento aleatorio de aviso em 61%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 61%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: evento aleatorio de aviso em 68%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 68%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Evento aleatorio de log em 77%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 77%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: evento aleatorio de aviso em 81%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 81%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Evento aleatorio de log em 81%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 81%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: evento aleatorio de aviso em 97%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 97%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: evento aleatorio de aviso em 97%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 97%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: evento aleatorio de aviso em 97%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 97%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo AVISO: evento aleatorio de aviso em 97%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 97%
+[TERMINAL_MANAGER] Enviando comando (PID 4120): echo Teste aleatorio concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste aleatorio concluido
+[SESSAO] Execução em lote finalizada em 16/07/2026 19:18:31
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52185092096
+[DEBUG ESPAÇO]   GB (valor completo): 48.60115432739258
+[DEBUG ESPAÇO]   round(gb, 1):        48.6
+[DEBUG ESPAÇO]   truncado (floor):    48.6
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52188086272
+[DEBUG ESPAÇO]   GB (valor completo): 48.60394287109375
+[DEBUG ESPAÇO]   round(gb, 1):        48.6
+[DEBUG ESPAÇO]   truncado (floor):    48.6
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 16/07/2026 19:27:03
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 16/07/2026 19:27:10 - Tarefas: ['lab_aviso']
+[TERMINAL_MANAGER] Novo CMD criado - PID 11472 - Titulo: Assistente de Manutencao - Terminal Gerenciado [414e12e8]
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Teste de aviso iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de aviso iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: alguns arquivos foram ignorados na etapa 5
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: alguns arquivos foram ignorados na etapa 5
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: alguns arquivos foram ignorados na etapa 10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: alguns arquivos foram ignorados na etapa 10
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Teste de aviso concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de aviso concluido
+[SESSAO] Execução em lote finalizada em 16/07/2026 19:27:15
+=======================================================
+[SESSAO] Execução em lote iniciada em 16/07/2026 19:27:28 - Tarefas: ['lab_indeterminado', 'lab_erro', 'lab_aviso', 'lab_reinicializacao', 'lab_aleatorio']
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Teste de barra indeterminada iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de barra indeterminada iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Trabalhando... 5s decorridos
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Trabalhando... 5s decorridos
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Teste de barra indeterminada concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de barra indeterminada concluido
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Teste de erro iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de erro iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 1/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 1/20
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 2/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 2/20
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 3/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 3/20
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 4/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 4/20
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 5/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 5/20
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 6/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 6/20
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 7/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 7/20
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 8/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 8/20
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 9/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 9/20
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 10/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 10/20
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 11/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 11/20
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 12/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 12/20
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 13/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 13/20
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 14/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 14/20
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo ERRO: falha simulada no ponto de falha controlado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo ERRO: falha simulada no ponto de falha controlado
+[ERRO INESPERADO] Erro simulado pelo Laboratório para teste de interface
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Teste de aviso iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de aviso iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: alguns arquivos foram ignorados na etapa 5
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: alguns arquivos foram ignorados na etapa 5
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: alguns arquivos foram ignorados na etapa 10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: alguns arquivos foram ignorados na etapa 10
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Teste de aviso concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de aviso concluido
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Teste de reinicializacao iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de reinicializacao iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 1/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 1/8
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 2/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 2/8
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 3/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 3/8
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 4/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 4/8
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 5/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 5/8
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 6/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 6/8
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 7/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 7/8
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Etapa 8/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 8/8
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: reinicializacao necessaria (simulado, nenhum reinicio real ocorrera)
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: reinicializacao necessaria (simulado, nenhum reinicio real ocorrera)
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Teste aleatorio iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste aleatorio iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Evento aleatorio de log em 0%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 0%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 0%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 0%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Evento aleatorio de log em 0%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 0%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 9%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 9%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 9%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 9%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Evento aleatorio de log em 13%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 13%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 23%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 23%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Evento aleatorio de log em 28%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 28%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Evento aleatorio de log em 28%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 28%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 28%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 28%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 36%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 36%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Evento aleatorio de log em 36%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 36%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Evento aleatorio de log em 36%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 36%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 36%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 36%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 36%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 36%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Evento aleatorio de log em 41%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 41%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 47%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 47%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 60%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 60%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 65%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 65%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Evento aleatorio de log em 75%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 75%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Evento aleatorio de log em 82%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 82%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Evento aleatorio de log em 82%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 82%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 86%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 86%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 90%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 90%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 90%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 90%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Evento aleatorio de log em 90%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 90%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 90%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 90%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo AVISO: evento aleatorio de aviso em 99%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 99%
+[TERMINAL_MANAGER] Enviando comando (PID 11472): echo Teste aleatorio concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste aleatorio concluido
+[SESSAO] Execução em lote finalizada em 16/07/2026 19:30:09
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        51188359168
+[DEBUG ESPAÇO]   GB (valor completo): 47.672874450683594
+[DEBUG ESPAÇO]   round(gb, 1):        47.7
+[DEBUG ESPAÇO]   truncado (floor):    47.6
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52106870784
+[DEBUG ESPAÇO]   GB (valor completo): 48.52830505371094
+[DEBUG ESPAÇO]   round(gb, 1):        48.5
+[DEBUG ESPAÇO]   truncado (floor):    48.5
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 17/07/2026 09:46:39
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 17/07/2026 09:46:52 - Tarefas: ['lab_aviso', 'lab_reinicializacao']
+[TERMINAL_MANAGER] Novo CMD criado - PID 17132 - Titulo: Assistente de Manutencao - Terminal Gerenciado [050bdb9d]
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Teste de aviso iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de aviso iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo AVISO: alguns arquivos foram ignorados na etapa 5
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: alguns arquivos foram ignorados na etapa 5
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo AVISO: alguns arquivos foram ignorados na etapa 10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: alguns arquivos foram ignorados na etapa 10
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Teste de aviso concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de aviso concluido
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Teste de reinicializacao iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de reinicializacao iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 1/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 1/8
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 2/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 2/8
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 3/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 3/8
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 4/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 4/8
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 5/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 5/8
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 6/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 6/8
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 7/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 7/8
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 8/8
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 8/8
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo AVISO: reinicializacao necessaria (simulado, nenhum reinicio real ocorrera)
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: reinicializacao necessaria (simulado, nenhum reinicio real ocorrera)
+[SESSAO] Execução em lote finalizada em 17/07/2026 09:47:00
+=======================================================
+[SESSAO] Execução em lote iniciada em 17/07/2026 09:47:10 - Tarefas: ['lab_erro', 'lab_aleatorio']
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Teste de erro iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de erro iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 1/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 1/20
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 2/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 2/20
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 3/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 3/20
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 4/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 4/20
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 5/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 5/20
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 6/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 6/20
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 7/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 7/20
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 8/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 8/20
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 9/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 9/20
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 10/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 10/20
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 11/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 11/20
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 12/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 12/20
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 13/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 13/20
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 14/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 14/20
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo ERRO: falha simulada no ponto de falha controlado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo ERRO: falha simulada no ponto de falha controlado
+[ERRO INESPERADO] Erro simulado pelo Laboratório para teste de interface
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Teste aleatorio iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste aleatorio iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo AVISO: evento aleatorio de aviso em 4%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 4%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo AVISO: evento aleatorio de aviso em 18%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 18%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo AVISO: evento aleatorio de aviso em 18%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 18%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Evento aleatorio de log em 18%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 18%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo AVISO: evento aleatorio de aviso em 18%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 18%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo AVISO: evento aleatorio de aviso em 21%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 21%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Evento aleatorio de log em 21%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 21%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Evento aleatorio de log em 21%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 21%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Evento aleatorio de log em 28%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 28%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Evento aleatorio de log em 28%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 28%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Evento aleatorio de log em 37%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 37%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Evento aleatorio de log em 37%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 37%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Evento aleatorio de log em 37%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 37%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo AVISO: evento aleatorio de aviso em 37%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 37%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo AVISO: evento aleatorio de aviso em 49%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 49%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo AVISO: evento aleatorio de aviso em 63%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 63%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo AVISO: evento aleatorio de aviso em 63%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 63%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo AVISO: evento aleatorio de aviso em 63%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 63%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo AVISO: evento aleatorio de aviso em 63%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 63%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo AVISO: evento aleatorio de aviso em 67%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 67%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Teste aleatorio concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste aleatorio concluido
+[SESSAO] Execução em lote finalizada em 17/07/2026 09:47:32
+=======================================================
+[SESSAO] Execução em lote iniciada em 17/07/2026 09:47:47 - Tarefas: ['lab_rapido']
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Teste rapido iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste rapido iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 1/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 1/10
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 2/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 2/10
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 3/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 3/10
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 4/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 4/10
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 5/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 5/10
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 6/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 6/10
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 7/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 7/10
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 8/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 8/10
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 9/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 9/10
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Etapa 10/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 10/10
+[TERMINAL_MANAGER] Enviando comando (PID 17132): echo Teste rapido concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste rapido concluido
+[SESSAO] Execução em lote finalizada em 17/07/2026 09:47:49
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52112293888
+[DEBUG ESPAÇO]   GB (valor completo): 48.533355712890625
+[DEBUG ESPAÇO]   round(gb, 1):        48.5
+[DEBUG ESPAÇO]   truncado (floor):    48.5
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52111052800
+[DEBUG ESPAÇO]   GB (valor completo): 48.53219985961914
+[DEBUG ESPAÇO]   round(gb, 1):        48.5
+[DEBUG ESPAÇO]   truncado (floor):    48.5
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 17/07/2026 09:57:09
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 17/07/2026 09:57:24 - Tarefas: ['lab_erro']
+[TERMINAL_MANAGER] Novo CMD criado - PID 13748 - Titulo: Assistente de Manutencao - Terminal Gerenciado [d6ab3e0d]
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo Teste de erro iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de erro iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo Etapa 1/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 1/20
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo Etapa 2/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 2/20
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo Etapa 3/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 3/20
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo Etapa 4/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 4/20
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo Etapa 5/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 5/20
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo Etapa 6/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 6/20
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo Etapa 7/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 7/20
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo Etapa 8/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 8/20
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo Etapa 9/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 9/20
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo Etapa 10/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 10/20
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo Etapa 11/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 11/20
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo Etapa 12/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 12/20
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo Etapa 13/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 13/20
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo Etapa 14/20
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 14/20
+[TERMINAL_MANAGER] Enviando comando (PID 13748): echo ERRO: falha simulada no ponto de falha controlado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo ERRO: falha simulada no ponto de falha controlado
+[ERRO INESPERADO] Erro simulado pelo Laboratório para teste de interface
+[SESSAO] Execução em lote finalizada em 17/07/2026 09:57:28
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52108513280
+[DEBUG ESPAÇO]   GB (valor completo): 48.52983474731445
+[DEBUG ESPAÇO]   round(gb, 1):        48.5
+[DEBUG ESPAÇO]   truncado (floor):    48.5
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+[SESSAO] Execução em lote iniciada em 17/07/2026 09:57:35 - Tarefas: ['sfc']
+[SFC] Iniciado em 17/07/2026 09:57:35
+[TERMINAL_MANAGER] Enviando comando (PID 13748): sfc /scannow
+[TERMINAL_MANAGER] Comando concluido - codigo 0: sfc /scannow
+[SFC] Concluído - codigo 0 - 17/07/2026 10:02:41
+[SESSAO] Execução em lote finalizada em 17/07/2026 10:02:41
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52015394816
+[DEBUG ESPAÇO]   GB (valor completo): 48.443111419677734
+[DEBUG ESPAÇO]   round(gb, 1):        48.4
+[DEBUG ESPAÇO]   truncado (floor):    48.4
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        52014440448
+[DEBUG ESPAÇO]   GB (valor completo): 48.442222595214844
+[DEBUG ESPAÇO]   round(gb, 1):        48.4
+[DEBUG ESPAÇO]   truncado (floor):    48.4
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 17/07/2026 16:33:22
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 17/07/2026 16:34:39 - Tarefas: ['lab_rapido']
+[TERMINAL_MANAGER] Novo CMD criado - PID 15504 - Titulo: Assistente de Manutencao - Terminal Gerenciado [47ceec20]
+[TERMINAL_MANAGER] Enviando comando (PID 15504): echo Teste rapido iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste rapido iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 15504): echo Etapa 1/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 1/10
+[TERMINAL_MANAGER] Enviando comando (PID 15504): echo Etapa 2/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 2/10
+[TERMINAL_MANAGER] Enviando comando (PID 15504): echo Etapa 3/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 3/10
+[TERMINAL_MANAGER] Enviando comando (PID 15504): echo Etapa 4/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 4/10
+[TERMINAL_MANAGER] Enviando comando (PID 15504): echo Etapa 5/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 5/10
+[TERMINAL_MANAGER] Enviando comando (PID 15504): echo Etapa 6/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 6/10
+[TERMINAL_MANAGER] Enviando comando (PID 15504): echo Etapa 7/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 7/10
+[TERMINAL_MANAGER] Enviando comando (PID 15504): echo Etapa 8/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 8/10
+[TERMINAL_MANAGER] Enviando comando (PID 15504): echo Etapa 9/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 9/10
+[TERMINAL_MANAGER] Enviando comando (PID 15504): echo Etapa 10/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 10/10
+[TERMINAL_MANAGER] Enviando comando (PID 15504): echo Teste rapido concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste rapido concluido
+[SESSAO] Execução em lote finalizada em 17/07/2026 16:34:41
+=======================================================
+[SESSAO] Execução em lote iniciada em 17/07/2026 16:34:51 - Tarefas: ['lab_rapido']
+[TERMINAL_MANAGER] CMD gerenciado nao esta mais ativo - recriando...
+[TERMINAL_MANAGER] Novo CMD criado - PID 13836 - Titulo: Assistente de Manutencao - Terminal Gerenciado [edf5425a]
+[TERMINAL_MANAGER] Enviando comando (PID 13836): echo Teste rapido iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste rapido iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 13836): echo Etapa 1/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 1/10
+[TERMINAL_MANAGER] Enviando comando (PID 13836): echo Etapa 2/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 2/10
+[TERMINAL_MANAGER] Enviando comando (PID 13836): echo Etapa 3/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 3/10
+[TERMINAL_MANAGER] Enviando comando (PID 13836): echo Etapa 4/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 4/10
+[TERMINAL_MANAGER] Enviando comando (PID 13836): echo Etapa 5/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 5/10
+[TERMINAL_MANAGER] Enviando comando (PID 13836): echo Etapa 6/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 6/10
+[TERMINAL_MANAGER] Enviando comando (PID 13836): echo Etapa 7/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 7/10
+[TERMINAL_MANAGER] Enviando comando (PID 13836): echo Etapa 8/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 8/10
+[TERMINAL_MANAGER] Enviando comando (PID 13836): echo Etapa 9/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 9/10
+[TERMINAL_MANAGER] Enviando comando (PID 13836): echo Etapa 10/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 10/10
+[TERMINAL_MANAGER] Enviando comando (PID 13836): echo Teste rapido concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste rapido concluido
+[SESSAO] Execução em lote finalizada em 17/07/2026 16:34:53
+=======================================================
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        51964727296
+[DEBUG ESPAÇO]   GB (valor completo): 48.39592361450195
+[DEBUG ESPAÇO]   round(gb, 1):        48.4
+[DEBUG ESPAÇO]   truncado (floor):    48.3
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+[DEBUG ESPAÇO] Unidade: C:\
+[DEBUG ESPAÇO]   Bytes livres:        51963191296
+[DEBUG ESPAÇO]   GB (valor completo): 48.394493103027344
+[DEBUG ESPAÇO]   round(gb, 1):        48.4
+[DEBUG ESPAÇO]   truncado (floor):    48.3
+[DEBUG ESPAÇO]   -> Compare estes dois últimos com o valor mostrado pelo Explorer no MESMO instante (veja observação abaixo).
+
+
+=======================================================
+ Nova sessão: 17/07/2026 16:43:12
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 17/07/2026 16:43:38 - Tarefas: ['lab_rapido']
+[TERMINAL_MANAGER] Novo CMD criado - PID 368 - Titulo: Assistente de Manutencao - Terminal Gerenciado [97027baf]
+[TERMINAL_MANAGER] Enviando comando (PID 368): echo Teste rapido iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste rapido iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 368): echo Etapa 1/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 1/10
+[TERMINAL_MANAGER] Enviando comando (PID 368): echo Etapa 2/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 2/10
+[TERMINAL_MANAGER] Enviando comando (PID 368): echo Etapa 3/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 3/10
+[TERMINAL_MANAGER] Enviando comando (PID 368): echo Etapa 4/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 4/10
+[TERMINAL_MANAGER] Enviando comando (PID 368): echo Etapa 5/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 5/10
+[TERMINAL_MANAGER] Enviando comando (PID 368): echo Etapa 6/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 6/10
+[TERMINAL_MANAGER] Enviando comando (PID 368): echo Etapa 7/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 7/10
+[TERMINAL_MANAGER] Enviando comando (PID 368): echo Etapa 8/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 8/10
+[TERMINAL_MANAGER] Enviando comando (PID 368): echo Etapa 9/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 9/10
+[TERMINAL_MANAGER] Enviando comando (PID 368): echo Etapa 10/10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Etapa 10/10
+[TERMINAL_MANAGER] Enviando comando (PID 368): echo Teste rapido concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste rapido concluido
+[SESSAO] Execução em lote finalizada em 17/07/2026 16:43:40
+=======================================================
+[TERMINAL_MANAGER] CMD gerenciado (PID 368) encerrado junto com o aplicativo
+
+=======================================================
+ Nova sessão: 18/07/2026 09:00:31
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+[SESSAO] Execução em lote iniciada em 18/07/2026 09:00:55 - Tarefas: ['lab_medio', 'lab_aviso']
+[TERMINAL_MANAGER] Novo CMD criado - PID 12368 - Titulo: Assistente de Manutencao - Terminal Gerenciado [a8e06038]
+[TERMINAL_MANAGER] Enviando comando (PID 12368): echo Teste medio iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste medio iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 12368): echo Checkpoint: 10/30 itens processados
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Checkpoint: 10/30 itens processados
+[TERMINAL_MANAGER] Enviando comando (PID 12368): echo Checkpoint: 20/30 itens processados
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Checkpoint: 20/30 itens processados
+[TERMINAL_MANAGER] Enviando comando (PID 12368): echo Checkpoint: 30/30 itens processados
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Checkpoint: 30/30 itens processados
+[TERMINAL_MANAGER] Enviando comando (PID 12368): echo Teste medio concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste medio concluido
+[TERMINAL_MANAGER] Enviando comando (PID 12368): echo Teste de aviso iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de aviso iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 12368): echo AVISO: alguns arquivos foram ignorados na etapa 5
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: alguns arquivos foram ignorados na etapa 5
+[TERMINAL_MANAGER] Enviando comando (PID 12368): echo AVISO: alguns arquivos foram ignorados na etapa 10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: alguns arquivos foram ignorados na etapa 10
+[TERMINAL_MANAGER] Enviando comando (PID 12368): echo Teste de aviso concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de aviso concluido
+[SESSAO] Execução em lote finalizada em 18/07/2026 09:01:15
+=======================================================
+[SESSAO] Execução em lote iniciada em 18/07/2026 09:02:49 - Tarefas: ['lab_aviso']
+[TERMINAL_MANAGER] CMD gerenciado nao esta mais ativo - recriando...
+[TERMINAL_MANAGER] Novo CMD criado - PID 16552 - Titulo: Assistente de Manutencao - Terminal Gerenciado [b87f0343]
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Teste de aviso iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de aviso iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: alguns arquivos foram ignorados na etapa 5
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: alguns arquivos foram ignorados na etapa 5
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: alguns arquivos foram ignorados na etapa 10
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: alguns arquivos foram ignorados na etapa 10
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Teste de aviso concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste de aviso concluido
+[SESSAO] Execução em lote finalizada em 18/07/2026 09:02:54
+=======================================================
+[SESSAO] Execução em lote iniciada em 18/07/2026 09:04:12 - Tarefas: ['lab_aleatorio']
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Teste aleatorio iniciado
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste aleatorio iniciado
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 0%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 0%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 13%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 13%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 20%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 20%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 20%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 20%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 20%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 20%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 20%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 20%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 20%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 20%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 20%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 20%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 20%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 20%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 24%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 24%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 24%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 24%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 24%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 24%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 24%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 24%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 24%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 24%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 24%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 24%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 28%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 28%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 38%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 38%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 38%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 38%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 50%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 50%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 50%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 50%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 50%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 50%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 50%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 50%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 50%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 50%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 56%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 56%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 56%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 56%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 56%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 56%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 56%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 56%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 63%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 63%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 63%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 63%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 63%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 63%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 66%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 66%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 66%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 66%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 66%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 66%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 75%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 75%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 75%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 75%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 75%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 75%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 75%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 75%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 75%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 75%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 83%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 83%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 83%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 83%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 83%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 83%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 83%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 83%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 83%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 83%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 83%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 83%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo AVISO: evento aleatorio de aviso em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Evento aleatorio de log em 93%
+[TERMINAL_MANAGER] Enviando comando (PID 16552): echo Teste aleatorio concluido
+[TERMINAL_MANAGER] Comando concluido - codigo 0: echo Teste aleatorio concluido
+[SESSAO] Execução em lote finalizada em 18/07/2026 09:04:45
+=======================================================
+[TERMINAL_MANAGER] CMD gerenciado (PID 16552) encerrado junto com o aplicativo
+
+=======================================================
+ Nova sessão: 18/07/2026 09:13:17
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+
+=======================================================
+ Nova sessão: 18/07/2026 18:35:48
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+
+=======================================================
+ Nova sessão: 18/07/2026 18:41:39
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+
+=======================================================
+ Nova sessão: 18/07/2026 19:28:37
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+
+=======================================================
+ Nova sessão: 18/07/2026 19:30:49
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+
+=======================================================
+ Nova sessão: 18/07/2026 19:39:56
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
