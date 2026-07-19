@@ -134,6 +134,24 @@ TAREFAS: List[TaskDefinition] = [
         requer_reinicializacao=True, tempo_estimado_min=1,
     ),
     TaskDefinition(
+        chave="dism_check", icone="\U0001FA7A", titulo="Checagem rápida da imagem do Windows",
+        descricao="Verifica rapidamente se há sinalização de corrupção conhecida, sem reparar nada.",
+        categoria="diagnostico", comando_tecnico="DISM /Online /Cleanup-Image /CheckHealth",
+        tempo_estimado_min=1,
+    ),
+    TaskDefinition(
+        chave="dism_scan", icone="\U0001F50D", titulo="Varredura da imagem do Windows",
+        descricao="Varre a imagem do sistema em busca de corrupção, sem reparar nada (só leitura).",
+        categoria="diagnostico", comando_tecnico="DISM /Online /Cleanup-Image /ScanHealth",
+        tempo_estimado_min=8,
+    ),
+    TaskDefinition(
+        chave="restore_point", icone="\U0001F6E1", titulo="Criar ponto de restauração",
+        descricao="Cria um ponto de restauração do sistema antes de reparos, usando o mecanismo oficial do Windows.",
+        categoria="recuperacao", comando_tecnico="Checkpoint-Computer",
+        tempo_estimado_min=2,
+    ),
+    TaskDefinition(
         chave="lab_rapido", icone="\u26A1", titulo="Teste rápido",
         descricao="Simulação rápida de progresso — sobe até 100% em poucos segundos.",
         categoria="laboratorio",

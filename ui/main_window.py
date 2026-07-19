@@ -57,6 +57,11 @@ from core.limpeza.recyclebin import esvaziar_lixeira
 from core.limpeza.update_cache import limpar_cache_windows_update
 from core.limpeza.thumbnail_cache import limpar_cache_miniaturas
 from core.diagnostico.chkdsk import agendar_chkdsk
+from core.diagnostico.dism_diagnostico import executar_dism_checkhealth, executar_dism_scanhealth
+from core.diagnostico.smart_disco import obter_saude_discos
+from core.diagnostico.espaco_disco import analisar_espaco_pastas
+from core.diagnostico.eventos_criticos import obter_eventos_criticos
+from core.recuperacao.restore_point import criar_ponto_restauracao
 from core.laboratorio.rapido import teste_rapido
 from core.laboratorio.medio import teste_medio
 from core.laboratorio.longo import teste_longo
@@ -73,6 +78,9 @@ from ui.sidebar import Sidebar
 from ui.dashboard import Dashboard
 from ui.task_view import TaskView
 from ui.execution_panel import ExecutionPanel
+from ui.sistema_view import SistemaView
+from ui.historico_view import HistoricoView
+from ui.resultado_window import exibir_resultado
 
 
 class ManutencaoApp:
@@ -231,6 +239,12 @@ class ManutencaoApp:
         elif categoria == "execucao":
             self.lbl_titulo_topo.config(text="Execução")
             self._mostrar_tela_execucao(wrapper)
+        elif categoria == "sistema":
+            self.lbl_titulo_topo.config(text="Sistema")
+            SistemaView(wrapper, self).pack(fill="both", expand=True)
+        elif categoria == "historico":
+            self.lbl_titulo_topo.config(text="Histórico")
+            HistoricoView(wrapper, self).pack(fill="both", expand=True)
         elif categoria in CATEGORIAS_EM_BREVE:
             meta = next(c for c in CATEGORIAS if c[0] == categoria)
             self.lbl_titulo_topo.config(text=meta[2])
@@ -239,7 +253,8 @@ class ManutencaoApp:
             meta = next(c for c in CATEGORIAS if c[0] == categoria)
             self.lbl_titulo_topo.config(text=meta[2])
             tarefas = tarefas_por_categoria(categoria)
-            TaskView(wrapper, self, categoria, tarefas).pack(fill="both", expand=True)
+            acoes = self._acoes_instantaneas_para(categoria)
+            TaskView(wrapper, self, categoria, tarefas, acoes_instantaneas=acoes).pack(fill="both", expand=True)
 
     def _mostrar_tela_execucao(self, wrapper):
         """Cria a tela 'Execução' como uma VIEW que observa o
@@ -453,6 +468,121 @@ class ManutencaoApp:
             f"Espaço em disco ({agora()})", texto or "Nenhuma unidade encontrada."
         )
 
+    # -------------------- Ações instantâneas por categoria --------------------
+    def _acoes_instantaneas_para(self, categoria: str):
+        """Lista de ações instantâneas (ver ui/task_view.py) para a
+        categoria informada, ou None se ela não tiver nenhuma. Hoje só
+        a categoria Diagnóstico tem — as demais continuam exatamente
+        como antes."""
+        if categoria != "diagnostico":
+            return None
+        return [
+            {"icone": "\U0001FA7A", "titulo": "Saúde SMART dos discos", "comando": self.ver_saude_discos},
+            {"icone": "\U0001F4CA", "titulo": "Espaço por pasta (C:)", "comando": self.ver_espaco_por_pasta},
+            {"icone": "\u26A0", "titulo": "Eventos críticos recentes", "comando": self.ver_eventos_criticos},
+        ]
+
+    # -------------------- Diagnóstico: SMART dos discos (ação instantânea) --------------------
+    def ver_saude_discos(self):
+        self.set_status("Consultando saúde dos discos...")
+        threading.Thread(target=self._consultar_smart_thread, daemon=True).start()
+
+    def _consultar_smart_thread(self):
+        discos = obter_saude_discos()
+        self.root.after(0, lambda: self._exibir_resultado_smart(discos))
+
+    def _exibir_resultado_smart(self, discos: list):
+        self.set_status("")
+        if discos and "erro" in discos[0]:
+            exibir_resultado(self.root, "Saúde SMART dos discos", f"Erro: {discos[0]['erro']}")
+            return
+
+        blocos = []
+        for d in discos:
+            linhas = [
+                f"Modelo:              {d['modelo']}",
+                f"Tipo:                {d['tipo']}",
+                f"Status SMART:        {d['status_smart']}",
+            ]
+            if d.get("status_operacional"):
+                linhas.append(f"Status operacional:  {d['status_operacional']}")
+            if d.get("tamanho_gb") is not None:
+                linhas.append(f"Tamanho:             {d['tamanho_gb']} GB")
+            if d.get("temperatura_c") is not None:
+                linhas.append(f"Temperatura:         {d['temperatura_c']} °C")
+            if d.get("horas_uso") is not None:
+                linhas.append(f"Horas de uso:        {d['horas_uso']}")
+            if d.get("desgaste_pct") is not None:
+                linhas.append(f"Vida útil usada:     {d['desgaste_pct']}%")
+            if d.get("erros_leitura") is not None:
+                linhas.append(f"Erros de leitura:    {d['erros_leitura']}")
+            if d.get("erros_escrita") is not None:
+                linhas.append(f"Erros de escrita:    {d['erros_escrita']}")
+            if d.get("serial") and d["serial"] != "Não disponível":
+                linhas.append(f"Número de série:     {d['serial']}")
+            if d["status_smart"].lower() not in ("healthy", "saudável", ""):
+                linhas.append("")
+                linhas.append("[ALERTA] Este disco não está reportando status saudável.")
+            blocos.append("\n".join(linhas))
+
+        texto = f"\n{'-'*50}\n\n".join(blocos) if blocos else "Nenhum disco encontrado."
+        exibir_resultado(self.root, f"Saúde SMART dos discos ({agora()})", texto)
+
+    # -------------------- Diagnóstico: espaço por pasta (ação instantânea) --------------------
+    def ver_espaco_por_pasta(self):
+        self.set_status("Analisando espaço em disco... (pode levar até 1 minuto)")
+        threading.Thread(target=self._analisar_espaco_pastas_thread, daemon=True).start()
+
+    def _analisar_espaco_pastas_thread(self):
+        def callback(msg):
+            self.root.after(0, lambda: self.set_status(msg))
+
+        resultado = analisar_espaco_pastas("C:\\", callback_status=callback)
+        self.root.after(0, lambda: self._exibir_resultado_espaco_pastas(resultado))
+
+    def _exibir_resultado_espaco_pastas(self, resultado: dict):
+        self.set_status("")
+        if "erro" in resultado:
+            exibir_resultado(self.root, "Espaço por pasta", f"Erro: {resultado['erro']}")
+            return
+
+        linhas = [f"Maiores pastas em {resultado['unidade']}\n"]
+        for i, (nome, tamanho_bytes) in enumerate(resultado["itens"], start=1):
+            tamanho_gb = tamanho_bytes / (1024 ** 3)
+            linhas.append(f"{i:>2}. {nome:<40} {self._fmt_gb_br(tamanho_gb)} GB")
+        if not resultado["itens"]:
+            linhas.append("Nenhuma pasta encontrada.")
+        exibir_resultado(self.root, f"Espaço por pasta ({agora()})", "\n".join(linhas))
+
+    # -------------------- Diagnóstico: eventos críticos (ação instantânea) --------------------
+    def ver_eventos_criticos(self):
+        self.set_status("Consultando o Log de Eventos do Windows...")
+        threading.Thread(target=self._consultar_eventos_thread, daemon=True).start()
+
+    def _consultar_eventos_thread(self):
+        resultado = obter_eventos_criticos()
+        self.root.after(0, lambda: self._exibir_resultado_eventos(resultado))
+
+    def _exibir_resultado_eventos(self, resultado: dict):
+        self.set_status("")
+        if "erro" in resultado:
+            exibir_resultado(self.root, "Eventos críticos recentes", f"Erro: {resultado['erro']}")
+            return
+
+        eventos = resultado.get("eventos", [])
+        dias = resultado.get("dias_janela", 7)
+        if not eventos:
+            texto = f"Nenhum evento Crítico ou de Erro encontrado nos últimos {dias} dias."
+        else:
+            blocos = []
+            for e in eventos:
+                blocos.append(
+                    f"[{e['data']}] {e['nivel']}  —  {e['origem']} (ID {e['id_evento']})\n"
+                    f"    {e['mensagem']}"
+                )
+            texto = f"Últimos {len(eventos)} evento(s) nos últimos {dias} dias:\n\n" + "\n\n".join(blocos)
+        exibir_resultado(self.root, f"Eventos críticos recentes ({agora()})", texto, largura=760)
+
     # -------------------- Execução em lote --------------------
     def executar_selecionadas(self):
         # Regra: apenas UMA execução por vez. Verifica isso antes de
@@ -490,6 +620,9 @@ class ManutencaoApp:
             "winupdate": lambda: limpar_cache_windows_update(obter_reporter("winupdate")),
             "thumbnail": lambda: limpar_cache_miniaturas(obter_reporter("thumbnail")),
             "chkdsk": lambda: agendar_chkdsk(obter_reporter("chkdsk"), self.disco_tipo, usar_r),
+            "dism_check": lambda: executar_dism_checkhealth(obter_reporter("dism_check")),
+            "dism_scan": lambda: executar_dism_scanhealth(obter_reporter("dism_scan")),
+            "restore_point": lambda: criar_ponto_restauracao(obter_reporter("restore_point")),
             "lab_rapido": lambda: teste_rapido(obter_reporter("lab_rapido")),
             "lab_medio": lambda: teste_medio(obter_reporter("lab_medio")),
             "lab_longo": lambda: teste_longo(obter_reporter("lab_longo")),

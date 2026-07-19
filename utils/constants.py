@@ -33,6 +33,7 @@ CATEGORIAS = [
     ("manutencao",  "\U0001F6E0", "Manutenção",  "Reparos e integridade do Windows"),
     ("limpeza",     "\U0001F9F9", "Limpeza",     "Liberação de espaço e cache"),
     ("diagnostico", "\U0001FA7A", "Diagnóstico", "Verificação de disco e saúde"),
+    ("recuperacao", "\U0001F6E1", "Recuperação", "Rede de segurança antes de reparos"),
     ("ferramentas", "\U0001F527", "Ferramentas", "Utilitários administrativos"),
     ("sistema",     "\U0001F5A5", "Sistema",     "Informações do computador"),
     ("historico",   "\U0001F4DC", "Histórico",   "Execuções anteriores"),
@@ -42,8 +43,12 @@ CATEGORIAS = [
 
 # Categorias que ainda não possuem tarefas reais implementadas.
 # A tela dessas categorias mostra um estado "em breve" em vez de
-# funcionalidades novas (fora do escopo desta etapa).
-CATEGORIAS_EM_BREVE = {"ferramentas", "sistema", "historico", "configuracoes"}
+# funcionalidades novas. "sistema" e "historico" saíram deste
+# conjunto nesta etapa (Fase 1 do roadmap) — passaram a ter telas
+# próprias (ver ui/sistema_view.py e ui/historico_view.py). Fora do
+# escopo desta etapa: "ferramentas" e "configuracoes" continuam
+# reservadas para o futuro.
+CATEGORIAS_EM_BREVE = {"ferramentas", "configuracoes"}
 
 
 # ---------------- TAREFAS DISPONÍVEIS ----------------

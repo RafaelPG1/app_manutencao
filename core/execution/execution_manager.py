@@ -213,7 +213,12 @@ class ExecutionManager:
     # -------------------- Laço principal (roda em thread própria) --------------------
     def _executar_lote(self, mapa_funcoes: dict):
         inicio = agora()
+        inicio_epoch_lote = time.time()
         log(f"[SESSAO] Execução em lote iniciada em {inicio} - Tarefas: {self.ordem_chaves}")
+        # Linha estruturada para a tela "Histórico" (ver utils/logger.py:
+        # ler_historico) — adicional às linhas de texto livre acima, que
+        # continuam existindo exatamente como antes.
+        log(f"[HISTORICO] LOTE_INICIO | data={inicio} | tarefas={','.join(self.ordem_chaves)}")
         self.escrever_log(
             f"\n{'#'*60}\n### EXECUÇÃO EM LOTE - {self.total} tarefa(s) selecionada(s)\n{'#'*60}\n",
             "titulo"
@@ -238,6 +243,7 @@ class ExecutionManager:
                 self.definir_mensagem("")
                 self.escrever_log(f"\n[{i}/{self.total}] \u25B6 {titulo}\n", "titulo")
 
+                inicio_tarefa_epoch = time.time()
                 estado_final = CONCLUIDA
                 try:
                     mapa_funcoes[chave]()
@@ -245,17 +251,24 @@ class ExecutionManager:
                     estado_final = ERRO
                     self.escrever_log(f"[ERRO INESPERADO] {e}\n", "erro")
                     log(f"[ERRO INESPERADO] {e}")
+                duracao_tarefa = time.time() - inicio_tarefa_epoch
 
                 self.marcar_estado_tarefa(chave, estado_final)
                 self.definir_progresso(i)
+                log(
+                    f"[HISTORICO] TAREFA | chave={chave} | titulo={titulo} "
+                    f"| estado={estado_final} | duracao_s={duracao_tarefa:.1f}"
+                )
         finally:
             fim = agora()
+            duracao_lote = time.time() - inicio_epoch_lote
             self.escrever_log(
                 f"\n{'#'*60}\n### LOTE FINALIZADO — Início: {inicio}  |  Fim: {fim}\n"
                 "Lembrete: reinicie o computador se DISM/SFC/CHKDSK foram executados.\n"
                 f"{'#'*60}\n", "titulo"
             )
             log(f"[SESSAO] Execução em lote finalizada em {fim}")
+            log(f"[HISTORICO] LOTE_FIM | data={fim} | duracao_s={duracao_lote:.1f}")
             log("=" * 55)
 
             with self._lock:

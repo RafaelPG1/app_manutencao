@@ -7,9 +7,10 @@
 # do aplicativo, gerenciado exclusivamente por
 # core/shared/terminal_manager.py — este módulo não sabe (nem precisa
 # saber) como esse CMD é criado, mantido ou recriado; só chama
-# terminal.executar(), que devolve o código de saída real do DISM
-# somente depois que ele de fato terminou (nunca por suposição — ver
-# o cabeçalho de terminal_manager.py).
+# terminal.executar() (através de core/shared/comando_terminal.py),
+# que devolve o código de saída real do DISM somente depois que ele
+# de fato terminou (nunca por suposição — ver o cabeçalho de
+# terminal_manager.py).
 #
 # Esse CMD é o console OFICIAL do aplicativo: toda a saída real do
 # DISM (progresso, resultado, "A operação foi concluída com êxito",
@@ -27,16 +28,16 @@
 # progresso INDETERMINADO (ver utils/tasks.py:
 # dism -> progresso_real=False), igual ao CHKDSK.
 #
-# Recebe um único TaskReporter (core/execution/reporter.py):
-#   - message(): status fixo, definido uma vez no início da tarefa;
-#   - log(): só os eventos de início e de término da tarefa em si
-#     (não é um espelho da saída do DISM, que já aparece nativamente
-#     no CMD).
+# NOTA: a estrutura de log/relato (início, message() de status,
+# tratamento de TerminalIndisponivelError, log de conclusão) é
+# compartilhada com core/manutencao/sfc.py e com as novas tarefas de
+# diagnóstico DISM (core/diagnostico/dism_diagnostico.py) através de
+# core/shared/comando_terminal.py — só o comando e os textos mudam.
+# A assinatura pública desta função (executar_dism(reporter)) e todo
+# o texto exibido/logado permanecem exatamente os mesmos de antes.
 # ==========================================================
 
-from utils.helpers import agora
-from utils.logger import log
-from core.shared.terminal_manager import terminal, TerminalIndisponivelError
+from core.shared.comando_terminal import executar_comando_no_terminal
 
 _MENSAGEM_STATUS = "Reparando a imagem do Windows... (acompanhe no Prompt de Comando aberto)"
 
@@ -51,17 +52,10 @@ def executar_dism(reporter):
     "dism"); a barra do LOTE é responsabilidade do ExecutionManager e
     não é tocada aqui — ela só avança quando esta função retorna.
     """
-    reporter.log("[INFO] Iniciando reparo da imagem do Windows...\n", "titulo")
-    reporter.log("[INFO] Acompanhe a execução no Prompt de Comando do aplicativo.\n")
-    reporter.message(_MENSAGEM_STATUS)
-    log(f"[DISM] Iniciado em {agora()}")
-
-    try:
-        rc = terminal.executar("DISM /Online /Cleanup-Image /RestoreHealth")
-    except TerminalIndisponivelError as e:
-        reporter.log(f"[ERRO] {e}\n", "erro")
-        log(f"[DISM] TERMINAL INDISPONÍVEL - {e} - {agora()}")
-        return
-
-    reporter.log(f"[INFO] DISM concluído (código de retorno: {rc}).\n", "ok")
-    log(f"[DISM] Concluído - codigo {rc} - {agora()}")
+    executar_comando_no_terminal(
+        reporter,
+        comando="DISM /Online /Cleanup-Image /RestoreHealth",
+        tag_log="DISM",
+        mensagem_inicio="Iniciando reparo da imagem do Windows...",
+        mensagem_status=_MENSAGEM_STATUS,
+    )

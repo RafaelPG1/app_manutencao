@@ -53,15 +53,28 @@ def _garantir_estilo_scroll():
 
 
 class TaskView(ttk.Frame):
-    def __init__(self, parent, app, categoria: str, tarefas):
+    def __init__(self, parent, app, categoria: str, tarefas, acoes_instantaneas=None):
         """app: referência ao ManutencaoApp (fornece vars_tarefas e ações).
         categoria: chave da categoria (ex.: 'limpeza').
         tarefas: lista de utils.tasks.TaskDefinition já filtrada para
-        esta categoria."""
+        esta categoria.
+        acoes_instantaneas: lista opcional de dicts
+        {"icone": str, "titulo": str, "comando": callable} — ações que
+        rodam na hora (fora do lote checkbox + Executar), mostradas
+        como botões secundários logo abaixo do cabeçalho. Usado hoje
+        pela categoria Diagnóstico para consultas rápidas e somente
+        leitura (SMART, espaço por pasta, eventos críticos) cujo
+        resultado é mostrado em uma janela própria (ver
+        ui/resultado_window.py) em vez de passar pelo
+        ExecutionManager — ver o cabeçalho de
+        core/diagnostico/espaco_disco.py para o racional completo.
+        Nenhuma categoria existente passa este parâmetro, então nada
+        muda para elas."""
         super().__init__(parent)
         self.app = app
         self.categoria = categoria
         self.tarefas = tarefas
+        self.acoes_instantaneas = acoes_instantaneas or []
         self._scrollbar_visivel = False
         self._montar()
 
@@ -75,6 +88,7 @@ class TaskView(ttk.Frame):
             criar_painel_em_breve(self, icone, titulo)
             return
 
+        self._montar_acoes_instantaneas()
         self._montar_resumo()
 
         acoes_topo = ttk.Frame(self)
@@ -96,6 +110,22 @@ class TaskView(ttk.Frame):
 
     def _chaves(self):
         return [t.chave for t in self.tarefas]
+
+    # -------------------- Ações instantâneas (opcional) --------------------
+    def _montar_acoes_instantaneas(self):
+        if not self.acoes_instantaneas:
+            return
+        bloco = ttk.Frame(self)
+        bloco.pack(fill="x", pady=(0, 12))
+        ttk.Label(bloco, text="Consultas rápidas (resultado exibido na hora)",
+                  style="Status.TLabel").pack(anchor="w", pady=(0, 6))
+        linha = ttk.Frame(bloco)
+        linha.pack(fill="x")
+        for acao in self.acoes_instantaneas:
+            ttk.Button(
+                linha, text=f"{acao['icone']}  {acao['titulo']}", style="Secundario.TButton",
+                command=acao["comando"],
+            ).pack(side="left", padx=(0, 8))
 
     # -------------------- Área de scroll dos cards --------------------
     def _montar_area_scroll(self):

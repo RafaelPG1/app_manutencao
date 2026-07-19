@@ -76,3 +76,117 @@ def log(msg: str):
                 f.write(str(msg) + "\n")
     except Exception as e:
         print(f"[AVISO] Falha ao gravar log: {e}")
+
+
+# ==========================================================
+# Leitura estruturada do histórico (tela "Histórico")
+#
+# NÃO é um novo formato/arquivo de log: continua sendo o mesmo
+# LOGFILE, escrito exclusivamente através da função log() acima. A
+# única adição é que core/execution/execution_manager.py agora também
+# grava, além das linhas de texto livre que já existiam (ex.: "[SFC]
+# Concluído..."), um pequeno conjunto de linhas com um formato fixo e
+# previsível, sempre começando com a tag "[HISTORICO]" — para que
+# esta tela consiga reconstruir "o que rodou, quando e com que
+# resultado" sem depender de interpretar o texto livre e variado que
+# cada módulo de core/ já escrevia à sua própria maneira (um por
+# tarefa, cada um com um rótulo diferente — DNS, TEMP, LIXEIRA,
+# THUMBNAIL, WINUPDATE, DISM, SFC, CHKDSK etc. — o que tornaria o
+# parser frágil e obrigado a conhecer cada um deles).
+#
+# Formato das linhas adicionadas (uma por evento, sempre em um único
+# `log()`, nunca span múltiplas linhas):
+#   [HISTORICO] LOTE_INICIO | data=<dd/mm/aaaa hh:mm:ss> | tarefas=<chave,chave,...>
+#   [HISTORICO] TAREFA | chave=<chave> | titulo=<texto> | estado=<concluida|erro> | duracao_s=<float>
+#   [HISTORICO] LOTE_FIM | data=<dd/mm/aaaa hh:mm:ss> | duracao_s=<float>
+#
+# Um lote incompleto (ex.: o aplicativo foi encerrado no meio de uma
+# execução, sem LOTE_FIM) ainda é exibido, marcado como tal — as
+# tarefas que já tinham terminado continuam visíveis.
+# ==========================================================
+
+_TAG_HISTORICO = "[HISTORICO]"
+
+
+def _parse_campos(resto: str) -> dict:
+    """Extrai um dicionário simples de uma linha no formato
+    "chave=valor | chave=valor | ...". Usado só pelo parser de
+    histórico abaixo — nenhuma tarefa deve gerar esse formato
+    diretamente; é responsabilidade exclusiva do ExecutionManager."""
+    campos = {}
+    for parte in resto.split(" | "):
+        parte = parte.strip()
+        if not parte or "=" not in parte:
+            continue
+        chave, _, valor = parte.partition("=")
+        campos[chave.strip()] = valor.strip()
+    return campos
+
+
+def ler_historico(limite: int = 50) -> list:
+    """Lê o LOGFILE e reconstrói a lista de execuções em lote
+    passadas, mais recente primeiro, cada uma no formato:
+
+        {
+            "data_inicio": str, "data_fim": str | None,
+            "duracao_s": float | None, "completo": bool,
+            "tarefas": [
+                {"chave": str, "titulo": str, "estado": str,
+                 "duracao_s": float}, ...
+            ],
+        }
+
+    Nunca lança exceção: se o arquivo não existir ou não puder ser
+    lido, devolve uma lista vazia — a tela de Histórico trata isso
+    como "nenhuma execução registrada ainda", sem diferenciar do caso
+    de um log realmente vazio (a distinção não muda o que é exibido).
+    """
+    try:
+        with open(LOGFILE, "r", encoding="utf-8", errors="ignore") as f:
+            linhas = f.readlines()
+    except OSError:
+        return []
+
+    lotes = []
+    lote_atual = None
+    for linha in linhas:
+        linha = linha.rstrip("\n")
+        if _TAG_HISTORICO not in linha:
+            continue
+        resto = linha.split(_TAG_HISTORICO, 1)[1].strip()
+
+        if resto.startswith("LOTE_INICIO"):
+            campos = _parse_campos(resto[len("LOTE_INICIO"):].lstrip("| ").strip())
+            lote_atual = {
+                "data_inicio": campos.get("data", "—"),
+                "data_fim": None,
+                "duracao_s": None,
+                "completo": False,
+                "tarefas": [],
+            }
+            lotes.append(lote_atual)
+        elif resto.startswith("TAREFA") and lote_atual is not None:
+            campos = _parse_campos(resto[len("TAREFA"):].lstrip("| ").strip())
+            try:
+                duracao = float(campos.get("duracao_s", 0))
+            except ValueError:
+                duracao = 0.0
+            lote_atual["tarefas"].append({
+                "chave": campos.get("chave", "?"),
+                "titulo": campos.get("titulo", campos.get("chave", "?")),
+                "estado": campos.get("estado", "?"),
+                "duracao_s": duracao,
+            })
+        elif resto.startswith("LOTE_FIM") and lote_atual is not None:
+            campos = _parse_campos(resto[len("LOTE_FIM"):].lstrip("| ").strip())
+            try:
+                duracao_total = float(campos.get("duracao_s", 0))
+            except ValueError:
+                duracao_total = None
+            lote_atual["data_fim"] = campos.get("data", "—")
+            lote_atual["duracao_s"] = duracao_total
+            lote_atual["completo"] = True
+            lote_atual = None
+
+    lotes.reverse()  # mais recente primeiro
+    return lotes[:limite] if limite else lotes
