@@ -2,12 +2,24 @@
 # Arquivo: core/shared/terminal_manager.py
 # Responsabilidade: ÚNICO módulo do aplicativo autorizado a falar
 # diretamente com a API do Windows para abrir/controlar um Prompt de
-# Comando (cmd.exe) REAL. Nenhum outro módulo (tarefas de core/,
-# ExecutionManager, UI) deve chamar subprocess/Windows API por conta
-# própria para este fim — todos passam a usar apenas:
+# Comando (cmd.exe) REAL e VISÍVEL, persistente entre chamadas.
+# Nenhum outro módulo (tarefas de core/, ExecutionManager, UI) deve
+# abrir seu próprio cmd.exe visível para este fim — todos passam a
+# usar apenas:
 #
 #       from core.shared.terminal_manager import terminal
 #       rc = terminal.executar("sfc /scannow")
+#
+# IMPORTANTE — o que esta exclusividade NÃO cobre: comandos rápidos e
+# silenciosos, sem necessidade de um CMD visível para o usuário (ex.:
+# "ipconfig /flushdns", "net stop/start", uma consulta PowerShell),
+# continuam usando utils.helpers.executar_comando (subprocess direto,
+# sem janela) — ver core/limpeza/dns.py, core/shared/disk_info.py,
+# core/limpeza/update_cache.py e core/diagnostico/chkdsk.py. A regra
+# de exclusividade existe para impedir que MAIS DE UM cmd.exe visível
+# e gerenciado seja aberto ao mesmo tempo (o que quebraria a garantia
+# de "no máximo um" descrita abaixo) — não para proibir subprocess em
+# geral no projeto.
 #
 # --------------------------------------------------------------
 # O QUE ESTE MÓDULO GARANTE

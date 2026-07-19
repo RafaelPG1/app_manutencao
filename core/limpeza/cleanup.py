@@ -18,23 +18,42 @@ from utils.helpers import agora
 from utils.logger import log
 
 
-def limpar_pasta(pasta: str, ao_progredir=None):
+def limpar_pasta(pasta: str, ao_progredir=None, itens=None):
     """Remove todo o conteúdo de uma pasta, ignorando itens em uso.
 
     ao_progredir(processados, total), quando fornecido, é chamado
     após cada item ser processado (removido ou ignorado) — total é a
     contagem REAL de itens da pasta no início da operação.
 
+    itens, se fornecido, evita uma segunda listagem da pasta quando
+    quem chama já a listou antes (ex.: para somar o total de várias
+    pastas de antemão) — além de economizar uma varredura, evita que
+    o total contado e o total realmente processado divirjam caso
+    algum outro processo crie/remova arquivos entre as duas listagens.
+
     Retorna (removidos, ignorados).
     """
-    itens = os.listdir(pasta)
+    if itens is None:
+        itens = os.listdir(pasta)
     total = len(itens)
     removidos = 0
     ignorados = 0
     for i, nome in enumerate(itens, start=1):
         caminho = os.path.join(pasta, nome)
         try:
-            if os.path.isdir(caminho) and not os.path.islink(caminho):
+            if os.path.islink(caminho):
+                # Link simbólico: remover apenas o link, sem seguir o
+                # alvo. No Windows, um link para um diretório precisa
+                # de os.rmdir() — os.remove() (DeleteFile) falha nesse
+                # caso porque o item tem o atributo de diretório, ainda
+                # que seja um reparse point; a falha cairia no except
+                # abaixo e o link ficaria erroneamente contado como
+                # "em uso" (ignorado) em vez de removido.
+                if os.path.isdir(caminho):
+                    os.rmdir(caminho)
+                else:
+                    os.remove(caminho)
+            elif os.path.isdir(caminho):
                 shutil.rmtree(caminho)
             else:
                 os.remove(caminho)
@@ -66,21 +85,23 @@ def limpar_temporarios(reporter):
         if os.path.isdir(sys_temp):
             alvos.append(("Pasta sistema", sys_temp))
 
-    # Contagem REAL de itens antes de começar, em todas as pastas, para
+    # Listagem REAL de itens antes de começar, em todas as pastas, para
     # calcular um percentual verdadeiro ao longo de toda a operação —
-    # não apenas dentro de uma pasta por vez.
-    alvos_com_contagem = [(rotulo, caminho, len(os.listdir(caminho))) for rotulo, caminho in alvos]
-    total_geral = sum(c for _, _, c in alvos_com_contagem) or 1
+    # não apenas dentro de uma pasta por vez. A mesma listagem é
+    # repassada a limpar_pasta() abaixo (parâmetro itens) para não
+    # listar cada pasta duas vezes.
+    alvos_com_itens = [(rotulo, caminho, os.listdir(caminho)) for rotulo, caminho in alvos]
+    total_geral = sum(len(itens) for _, _, itens in alvos_com_itens) or 1
     processados_total = 0
 
-    for rotulo, caminho, _contagem in alvos_com_contagem:
+    for rotulo, caminho, itens in alvos_com_itens:
         def _ao_progredir(i, total, rotulo=rotulo):
             nonlocal processados_total
             processados_total += 1
             reporter.progress(min((processados_total / total_geral) * 100, 100))
             reporter.message(f"{rotulo}: {i}/{total}")
 
-        removidos, ignorados = limpar_pasta(caminho, ao_progredir=_ao_progredir)
+        removidos, ignorados = limpar_pasta(caminho, ao_progredir=_ao_progredir, itens=itens)
         reporter.log(
             f"[INFO] {rotulo}: {removidos} itens removidos, {ignorados} em uso (ignorados)\n"
         )

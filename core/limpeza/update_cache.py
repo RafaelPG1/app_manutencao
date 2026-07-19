@@ -39,9 +39,27 @@ def limpar_cache_windows_update(reporter):
         # listar a pasta) — sem isso, uma falha nessa etapa deixava o
         # Windows Update parado permanentemente, exigindo reinício
         # manual dos serviços ou reinicialização do computador.
+        #
+        # Os códigos de retorno são checados aqui (e só aqui, entre os
+        # comandos net stop/start deste arquivo) porque é justamente a
+        # falha em REINICIAR os serviços que deixaria o sistema em um
+        # estado degradado sem o usuário saber — falha ao PARAR os
+        # serviços no início não tem esse mesmo risco, pois a limpeza
+        # de arquivos abaixo já tolera itens em uso (ficam em "ignorados").
         reporter.log("Reiniciando serviço Windows Update...\n", "fraco")
-        executar_comando(["net", "start", "bits"])
-        executar_comando(["net", "start", "wuauserv"])
+        rc_bits, _, _ = executar_comando(["net", "start", "bits"])
+        rc_wuauserv, _, _ = executar_comando(["net", "start", "wuauserv"])
+        if rc_bits != 0 or rc_wuauserv != 0:
+            reporter.warning(
+                "Não foi possível confirmar o reinício de um ou mais "
+                "serviços do Windows Update (bits/wuauserv). Se o "
+                "Windows Update parar de funcionar, reinicie o "
+                "computador ou inicie os serviços manualmente.\n"
+            )
+            log(
+                f"[WINUPDATE] AVISO - falha ao reiniciar serviços "
+                f"(bits rc={rc_bits}, wuauserv rc={rc_wuauserv}) - {agora()}"
+            )
 
     reporter.progress(100)
     reporter.log(
