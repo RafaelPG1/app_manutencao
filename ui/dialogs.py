@@ -24,6 +24,21 @@ def perguntar_chkdsk_r() -> bool:
     )
 
 
+def confirmar_reparo_inicializacao() -> bool:
+    """Confirmação forte antes de reiniciar o computador para as
+    Opções de Inicialização Avançadas (WinRE) — ação disruptiva, com
+    reinicialização imediata assim que confirmada."""
+    return messagebox.askyesno(
+        "Reparo de Inicialização",
+        "Isto vai REINICIAR O COMPUTADOR AGORA nas Opções de Inicialização Avançadas do Windows.\n\n"
+        "Salve qualquer trabalho em aberto antes de continuar.\n\n"
+        "Depois de reiniciar, selecione:\n"
+        "Solucionar problemas  →  Opções avançadas  →  Reparo de Inicialização.\n\n"
+        "Deseja reiniciar agora?",
+        icon="warning",
+    )
+
+
 def confirmar_execucao(quantidade: int) -> bool:
     return messagebox.askyesno(
         "Confirmar execução",

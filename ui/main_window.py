@@ -32,7 +32,7 @@ import math
 import os
 import threading
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import ttk, messagebox, filedialog
 
 from config import APP_TITULO, APP_GEOMETRIA, APP_TAM_MINIMO
 from utils.constants import (
@@ -62,6 +62,12 @@ from core.diagnostico.smart_disco import obter_saude_discos
 from core.diagnostico.espaco_disco import analisar_espaco_pastas
 from core.diagnostico.eventos_criticos import obter_eventos_criticos
 from core.recuperacao.restore_point import criar_ponto_restauracao
+from core.recuperacao.system_restore_wizard import abrir_restaurar_sistema
+from core.recuperacao.startup_repair import iniciar_reparo_inicializacao
+from core.recuperacao.driver_backup import fazer_backup_drivers
+from core.recuperacao.relatorios_powercfg import (
+    gerar_relatorio_bateria, gerar_relatorio_energia, gerar_relatorio_eficiencia,
+)
 from core.laboratorio.rapido import teste_rapido
 from core.laboratorio.medio import teste_medio
 from core.laboratorio.longo import teste_longo
@@ -471,16 +477,23 @@ class ManutencaoApp:
     # -------------------- Ações instantâneas por categoria --------------------
     def _acoes_instantaneas_para(self, categoria: str):
         """Lista de ações instantâneas (ver ui/task_view.py) para a
-        categoria informada, ou None se ela não tiver nenhuma. Hoje só
-        a categoria Diagnóstico tem — as demais continuam exatamente
-        como antes."""
-        if categoria != "diagnostico":
-            return None
-        return [
-            {"icone": "\U0001FA7A", "titulo": "Saúde SMART dos discos", "comando": self.ver_saude_discos},
-            {"icone": "\U0001F4CA", "titulo": "Espaço por pasta (C:)", "comando": self.ver_espaco_por_pasta},
-            {"icone": "\u26A0", "titulo": "Eventos críticos recentes", "comando": self.ver_eventos_criticos},
-        ]
+        categoria informada, ou None se ela não tiver nenhuma."""
+        if categoria == "diagnostico":
+            return [
+                {"icone": "\U0001FA7A", "titulo": "Saúde SMART dos discos", "comando": self.ver_saude_discos},
+                {"icone": "\U0001F4CA", "titulo": "Espaço por pasta (C:)", "comando": self.ver_espaco_por_pasta},
+                {"icone": "\u26A0", "titulo": "Eventos críticos recentes", "comando": self.ver_eventos_criticos},
+            ]
+        if categoria == "recuperacao":
+            return [
+                {"icone": "\u23EA", "titulo": "Restaurar o Sistema", "comando": self.restaurar_sistema},
+                {"icone": "\U0001F6E0", "titulo": "Reparo de Inicialização", "comando": self.reparo_inicializacao},
+                {"icone": "\U0001F4E6", "titulo": "Backup dos drivers", "comando": self.backup_drivers},
+                {"icone": "\U0001F50B", "titulo": "Relatório de bateria", "comando": self.relatorio_bateria},
+                {"icone": "\u26A1", "titulo": "Relatório de energia", "comando": self.relatorio_energia},
+                {"icone": "\U0001F4C8", "titulo": "Relatório de eficiência", "comando": self.relatorio_eficiencia},
+            ]
+        return None
 
     # -------------------- Diagnóstico: SMART dos discos (ação instantânea) --------------------
     def ver_saude_discos(self):
@@ -582,6 +595,63 @@ class ManutencaoApp:
                 )
             texto = f"Últimos {len(eventos)} evento(s) nos últimos {dias} dias:\n\n" + "\n\n".join(blocos)
         exibir_resultado(self.root, f"Eventos críticos recentes ({agora()})", texto, largura=760)
+
+    # -------------------- Recuperação: ações instantâneas (Fase 3) --------------------
+    def restaurar_sistema(self):
+        resultado = abrir_restaurar_sistema()
+        if resultado["sucesso"]:
+            messagebox.showinfo("Restaurar o Sistema", resultado["mensagem"])
+        else:
+            messagebox.showerror("Restaurar o Sistema", resultado["mensagem"])
+
+    def reparo_inicializacao(self):
+        if not dialogs.confirmar_reparo_inicializacao():
+            return
+        resultado = iniciar_reparo_inicializacao()
+        if not resultado["sucesso"]:
+            messagebox.showerror("Reparo de Inicialização", resultado["mensagem"])
+        # Em caso de sucesso, o computador reinicia em seguida — não há
+        # necessidade (nem tempo útil) de mostrar mais nenhuma mensagem.
+
+    def backup_drivers(self):
+        pasta = filedialog.askdirectory(title="Escolha a pasta para salvar o backup dos drivers")
+        if not pasta:
+            return
+        self.set_status("Fazendo backup dos drivers instalados...")
+        threading.Thread(target=self._backup_drivers_thread, args=(pasta,), daemon=True).start()
+
+    def _backup_drivers_thread(self, pasta: str):
+        resultado = fazer_backup_drivers(pasta)
+        self.root.after(0, lambda: self._exibir_resultado_simples("Backup dos drivers", resultado))
+
+    def relatorio_bateria(self):
+        self.set_status("Gerando relatório de bateria...")
+        threading.Thread(target=self._relatorio_thread, args=(gerar_relatorio_bateria, "Relatório de bateria"), daemon=True).start()
+
+    def relatorio_energia(self):
+        self.set_status("Gerando relatório de energia... (leva cerca de 1 minuto)")
+        threading.Thread(target=self._relatorio_thread, args=(gerar_relatorio_energia, "Relatório de energia"), daemon=True).start()
+
+    def relatorio_eficiencia(self):
+        self.set_status("Gerando relatório de eficiência (Sleep Study)...")
+        threading.Thread(target=self._relatorio_thread, args=(gerar_relatorio_eficiencia, "Relatório de eficiência"), daemon=True).start()
+
+    def _relatorio_thread(self, funcao_geradora, titulo: str):
+        resultado = funcao_geradora()
+        self.root.after(0, lambda: self._exibir_resultado_simples(titulo, resultado))
+
+    def _exibir_resultado_simples(self, titulo: str, resultado: dict):
+        """Mostra o resultado {"sucesso": bool, "mensagem": str} de uma
+        ação instantânea da categoria Recuperação numa messagebox
+        simples — as mensagens dessas ações são curtas (um parágrafo),
+        diferente das consultas de Diagnóstico (SMART, eventos,
+        espaço em disco), que usam ui/resultado_window.py por
+        poderem ter várias linhas de dados."""
+        self.set_status("")
+        if resultado["sucesso"]:
+            messagebox.showinfo(titulo, resultado["mensagem"])
+        else:
+            messagebox.showerror(titulo, resultado["mensagem"])
 
     # -------------------- Execução em lote --------------------
     def executar_selecionadas(self):
