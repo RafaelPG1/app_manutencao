@@ -98,6 +98,24 @@ TAREFAS: List[TaskDefinition] = [
         requer_reinicializacao=True, tempo_estimado_min=15,
     ),
     TaskDefinition(
+        chave="reset_rede", icone="\U0001F310", titulo="Resetar pilha de rede",
+        descricao="Redefine Winsock, TCP/IP e limpa o cache de DNS — corrige problemas comuns de conectividade.",
+        categoria="manutencao", comando_tecnico="netsh winsock reset / netsh int ip reset",
+        requer_reinicializacao=True, tempo_estimado_min=1,
+    ),
+    TaskDefinition(
+        chave="trim_ssd", icone="\u26A1", titulo="Otimizar SSD (TRIM)",
+        descricao="Executa a otimização TRIM oficial em unidades SSD. Ignorada automaticamente em HDD.",
+        categoria="manutencao", comando_tecnico="Optimize-Volume -ReTrim",
+        tempo_estimado_min=3,
+    ),
+    TaskDefinition(
+        chave="dism_cleanup", icone="\U0001F9F9", titulo="Limpar componentes do Windows",
+        descricao="Remove versões antigas e superadas de componentes do sistema, liberando espaço.",
+        categoria="manutencao", comando_tecnico="DISM /Online /Cleanup-Image /StartComponentCleanup",
+        tempo_estimado_min=10,
+    ),
+    TaskDefinition(
         chave="dns", icone="\U0001F310", titulo="Limpar cache de DNS",
         descricao="Limpa o cache de resolução de nomes DNS do Windows.",
         categoria="limpeza", comando_tecnico="ipconfig /flushdns",
@@ -126,6 +144,30 @@ TAREFAS: List[TaskDefinition] = [
         descricao="Remove os arquivos de cache de miniaturas (thumbcache) do usuário atual.",
         categoria="limpeza",
         progresso_real=True, tempo_estimado_min=1,
+    ),
+    TaskDefinition(
+        chave="windows_old", icone="\U0001F5C3", titulo="Limpar Windows.old",
+        descricao="Remove a pasta com arquivos da instalação anterior do Windows, se existir.",
+        categoria="limpeza", comando_tecnico="Limpeza de Disco (Previous Installations)",
+        tempo_estimado_min=5,
+    ),
+    TaskDefinition(
+        chave="delivery_optimization", icone="\U0001F4E1", titulo="Limpar cache de Otimização de Entrega",
+        descricao="Limpa o cache usado para compartilhar atualizações entre dispositivos na rede.",
+        categoria="limpeza", comando_tecnico="Delete-DeliveryOptimizationCache",
+        tempo_estimado_min=1,
+    ),
+    TaskDefinition(
+        chave="logs_antigos", icone="\U0001F4C4", titulo="Limpar logs antigos do Windows",
+        descricao="Remove arquivos de log de instalação e relatórios de erro antigos (não afeta o Log de Eventos).",
+        categoria="limpeza", comando_tecnico="Limpeza de Disco (Setup Logs / WER)",
+        tempo_estimado_min=2,
+    ),
+    TaskDefinition(
+        chave="cache_sistema", icone="\U0001F4E6", titulo="Limpar cache adicional do sistema",
+        descricao="Limpa caches adicionais do Windows (Internet, DirectX Shader Cache).",
+        categoria="limpeza", comando_tecnico="Limpeza de Disco (categorias adicionais)",
+        tempo_estimado_min=2,
     ),
     TaskDefinition(
         chave="chkdsk", icone="\U0001F4BD", titulo="Agendar verificação de disco",

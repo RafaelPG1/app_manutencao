@@ -49,13 +49,21 @@ from core.shared.admin import is_admin, relaunch_as_admin
 from core.shared.disk_info import detectar_tipo_disco
 from core.shared.terminal_manager import terminal
 from core.dashboard.system_info import obter_espaco_disco
-from core.manutencao.dism import executar_dism
+from core.manutencao.dism import executar_dism, executar_dism_component_cleanup
 from core.manutencao.sfc import executar_sfc
+from core.manutencao.reset_rede import resetar_rede
+from core.manutencao.trim_ssd import otimizar_ssd
+from core.manutencao.windows_update_diagnostico import obter_diagnostico_windows_update
 from core.limpeza.dns import limpar_dns
 from core.limpeza.cleanup import limpar_temporarios
 from core.limpeza.recyclebin import esvaziar_lixeira
 from core.limpeza.update_cache import limpar_cache_windows_update
 from core.limpeza.thumbnail_cache import limpar_cache_miniaturas
+from core.limpeza.windows_old import limpar_windows_old
+from core.limpeza.delivery_optimization import limpar_delivery_optimization
+from core.limpeza.logs_antigos import limpar_logs_antigos
+from core.limpeza.cache_sistema import limpar_cache_adicional_sistema
+from core.limpeza.analise_espaco import calcular_espaco_recuperavel
 from core.diagnostico.chkdsk import agendar_chkdsk
 from core.diagnostico.dism_diagnostico import executar_dism_checkhealth, executar_dism_scanhealth
 from core.diagnostico.smart_disco import obter_saude_discos
@@ -478,6 +486,14 @@ class ManutencaoApp:
     def _acoes_instantaneas_para(self, categoria: str):
         """Lista de ações instantâneas (ver ui/task_view.py) para a
         categoria informada, ou None se ela não tiver nenhuma."""
+        if categoria == "manutencao":
+            return [
+                {"icone": "\U0001F5A5", "titulo": "Diagnóstico do Windows Update", "comando": self.diagnostico_windows_update},
+            ]
+        if categoria == "limpeza":
+            return [
+                {"icone": "\U0001F4CA", "titulo": "Analisar espaço recuperável", "comando": self.analisar_espaco_recuperavel},
+            ]
         if categoria == "diagnostico":
             return [
                 {"icone": "\U0001FA7A", "titulo": "Saúde SMART dos discos", "comando": self.ver_saude_discos},
@@ -494,6 +510,72 @@ class ManutencaoApp:
                 {"icone": "\U0001F4C8", "titulo": "Relatório de eficiência", "comando": self.relatorio_eficiencia},
             ]
         return None
+
+    # -------------------- Manutenção: diagnóstico do Windows Update (Fase 5) --------------------
+    def diagnostico_windows_update(self):
+        self.set_status("Consultando serviços do Windows Update...")
+        threading.Thread(target=self._diagnostico_wu_thread, daemon=True).start()
+
+    def _diagnostico_wu_thread(self):
+        info = obter_diagnostico_windows_update()
+        self.root.after(0, lambda: self._exibir_diagnostico_wu(info))
+
+    def _exibir_diagnostico_wu(self, info: dict):
+        self.set_status("")
+        if "erro" in info:
+            exibir_resultado(self.root, "Diagnóstico do Windows Update", f"Erro: {info['erro']}")
+            return
+
+        linhas = []
+        linhas.append("SERVIÇOS NECESSÁRIOS")
+        linhas.append("-" * 40)
+        for s in info["servicos"]:
+            marca = "  [ALERTA - desabilitado]" if s["problema"] else ""
+            linhas.append(f"{s['rotulo']:<45} {s['status']:<12} (início: {s['tipo_inicializacao']}){marca}")
+
+        linhas.append("")
+        linhas.append("CACHE DO WINDOWS UPDATE")
+        linhas.append("-" * 40)
+        if info["cache_mb"] is not None:
+            linhas.append(f"Tamanho atual: {info['cache_mb']:.1f} MB".replace(".", ","))
+        else:
+            linhas.append("Não foi possível determinar o tamanho do cache.")
+
+        linhas.append("")
+        if info["saudavel"]:
+            linhas.append("RESULTADO: o Windows Update aparenta estar saudável.")
+        else:
+            linhas.append(
+                "RESULTADO: um ou mais serviços necessários ao Windows Update estão "
+                "DESABILITADOS — isso normalmente impede o funcionamento do Windows Update."
+            )
+
+        exibir_resultado(self.root, f"Diagnóstico do Windows Update ({agora()})", "\n".join(linhas))
+
+    # -------------------- Limpeza: análise de espaço recuperável (Fase 6) --------------------
+    def analisar_espaco_recuperavel(self):
+        self.set_status("Calculando espaço recuperável... (pode levar até 1 minuto)")
+        threading.Thread(target=self._analise_espaco_thread, daemon=True).start()
+
+    def _analise_espaco_thread(self):
+        resultado = calcular_espaco_recuperavel()
+        self.root.after(0, lambda: self._exibir_analise_espaco(resultado))
+
+    def _exibir_analise_espaco(self, resultado: dict):
+        self.set_status("")
+
+        def _gb(valor):
+            return f"{valor:.1f} GB".replace(".", ",")
+
+        texto = (
+            f"Arquivos Temporários:\n{_gb(resultado['temp_gb'])}\n\n"
+            f"Delivery Optimization:\n{_gb(resultado['delivery_optimization_gb'])}\n\n"
+            f"Windows.old:\n{_gb(resultado['windows_old_gb'])}\n\n"
+            f"Total Recuperável:\n{_gb(resultado['total_gb'])}\n\n"
+            "Para liberar esse espaço, marque as tarefas correspondentes na lista "
+            "abaixo e clique em \"Executar selecionadas\"."
+        )
+        exibir_resultado(self.root, f"Espaço recuperável ({agora()})", texto, largura=420, altura=420)
 
     # -------------------- Diagnóstico: SMART dos discos (ação instantânea) --------------------
     def ver_saude_discos(self):
@@ -684,11 +766,18 @@ class ManutencaoApp:
         mapa_funcoes = {
             "dism": lambda: executar_dism(obter_reporter("dism")),
             "sfc": lambda: executar_sfc(obter_reporter("sfc")),
+            "reset_rede": lambda: resetar_rede(obter_reporter("reset_rede")),
+            "trim_ssd": lambda: otimizar_ssd(obter_reporter("trim_ssd"), self.disco_tipo),
+            "dism_cleanup": lambda: executar_dism_component_cleanup(obter_reporter("dism_cleanup")),
             "dns": lambda: limpar_dns(obter_reporter("dns")),
             "temp": lambda: limpar_temporarios(obter_reporter("temp")),
             "recycle": lambda: esvaziar_lixeira(obter_reporter("recycle")),
             "winupdate": lambda: limpar_cache_windows_update(obter_reporter("winupdate")),
             "thumbnail": lambda: limpar_cache_miniaturas(obter_reporter("thumbnail")),
+            "windows_old": lambda: limpar_windows_old(obter_reporter("windows_old")),
+            "delivery_optimization": lambda: limpar_delivery_optimization(obter_reporter("delivery_optimization")),
+            "logs_antigos": lambda: limpar_logs_antigos(obter_reporter("logs_antigos")),
+            "cache_sistema": lambda: limpar_cache_adicional_sistema(obter_reporter("cache_sistema")),
             "chkdsk": lambda: agendar_chkdsk(obter_reporter("chkdsk"), self.disco_tipo, usar_r),
             "dism_check": lambda: executar_dism_checkhealth(obter_reporter("dism_check")),
             "dism_scan": lambda: executar_dism_scanhealth(obter_reporter("dism_scan")),

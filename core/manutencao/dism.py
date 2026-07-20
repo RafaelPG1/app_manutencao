@@ -40,6 +40,7 @@
 from core.shared.comando_terminal import executar_comando_no_terminal
 
 _MENSAGEM_STATUS = "Reparando a imagem do Windows... (acompanhe no Prompt de Comando aberto)"
+_MENSAGEM_STATUS_CLEANUP = "Limpando componentes antigos do Windows... (acompanhe no Prompt de Comando aberto)"
 
 
 def executar_dism(reporter):
@@ -58,4 +59,21 @@ def executar_dism(reporter):
         tag_log="DISM",
         mensagem_inicio="Iniciando reparo da imagem do Windows...",
         mensagem_status=_MENSAGEM_STATUS,
+    )
+
+
+def executar_dism_component_cleanup(reporter):
+    """DISM /StartComponentCleanup (Fase 5) — remove versões antigas e
+    superadas de componentes do Windows Update armazenadas no
+    component store, liberando espaço em disco. Diferente de
+    /RestoreHealth (que REPARA a imagem): esta operação apenas limpa
+    componentes que o próprio Windows já sabe que não são mais
+    necessários — segue o mesmo padrão de terminal visível e mesma
+    ausência de interpretação do código de retorno."""
+    executar_comando_no_terminal(
+        reporter,
+        comando="DISM /Online /Cleanup-Image /StartComponentCleanup",
+        tag_log="DISM_CLEANUP",
+        mensagem_inicio="Iniciando limpeza de componentes antigos do Windows (StartComponentCleanup)...",
+        mensagem_status=_MENSAGEM_STATUS_CLEANUP,
     )

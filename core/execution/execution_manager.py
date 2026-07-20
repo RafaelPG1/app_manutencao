@@ -31,7 +31,7 @@ import time
 
 from utils.helpers import agora
 from utils.logger import LOGFILE, log
-from utils.tasks import capacidades_de, CAPACIDADES_PADRAO
+from utils.tasks import capacidades_de, CAPACIDADES_PADRAO, tarefa_por_chave
 from core.execution.reporter import TaskReporter
 
 # Estados possíveis de cada tarefa individual dentro do lote.
@@ -262,9 +262,30 @@ class ExecutionManager:
         finally:
             fim = agora()
             duracao_lote = time.time() - inicio_epoch_lote
+
+            # Lembrete de reinicialização DINÂMICO: em vez de uma frase
+            # fixa citando só DISM/SFC/CHKDSK (que ficaria incompleta
+            # assim que qualquer nova tarefa marcada com
+            # requer_reinicializacao=True fosse adicionada — como
+            # "Resetar pilha de rede" na Fase 5), verifica de fato quais
+            # das tarefas EXECUTADAS neste lote pedem reinicialização,
+            # usando o mesmo metadado já declarado em utils/tasks.py.
+            tarefas_que_pedem_reinicio = [
+                self.titulos_por_chave.get(chave, chave)
+                for chave in self.ordem_chaves
+                if (tarefa_por_chave(chave) and tarefa_por_chave(chave).requer_reinicializacao)
+            ]
+            if tarefas_que_pedem_reinicio:
+                lembrete = (
+                    "Lembrete: reinicie o computador — recomendado após: "
+                    + ", ".join(tarefas_que_pedem_reinicio) + ".\n"
+                )
+            else:
+                lembrete = ""
+
             self.escrever_log(
                 f"\n{'#'*60}\n### LOTE FINALIZADO — Início: {inicio}  |  Fim: {fim}\n"
-                "Lembrete: reinicie o computador se DISM/SFC/CHKDSK foram executados.\n"
+                f"{lembrete}"
                 f"{'#'*60}\n", "titulo"
             )
             log(f"[SESSAO] Execução em lote finalizada em {fim}")
