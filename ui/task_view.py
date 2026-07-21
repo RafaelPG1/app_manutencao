@@ -7,6 +7,7 @@
 
 import tkinter as tk
 from tkinter import ttk
+from tkinter import font as tkfont
 
 from utils.constants import COR_BG, COR_BG_CARD, COR_BORDA, COR_TEXTO, COR_TEXTO_FRACO, CATEGORIAS
 from ui.widgets import criar_cabecalho_secao, criar_card_tarefa, criar_painel_em_breve
@@ -103,10 +104,48 @@ class TaskView(ttk.Frame):
         # ----- rodapé com botão de execução -----
         rodape = ttk.Frame(self)
         rodape.pack(fill="x", pady=(10, 0))
-        ttk.Button(
+        btn_executar = ttk.Button(
             rodape, text="\u25B6  Executar selecionadas desta categoria",
             style="Accent.TButton", command=self._executar_categoria
-        ).pack(fill="x")
+        )
+        btn_executar.pack(fill="x")
+
+        # O texto ficava cortado em janelas mais estreitas: o botão
+        # ocupa toda a largura (fill="x"), mas o ttk nunca reduz um
+        # widget abaixo da largura "natural" pedida pelo texto — em vez
+        # disso, alguns temas simplesmente cortam o que não cabe, sem
+        # quebrar linha.
+        #
+        # A tentativa anterior usava btn_executar.config(wraplength=...),
+        # mas wraplength é uma opção específica de ttk.Label — ttk.Button
+        # não a reconhece, e isso disparava
+        # "_tkinter.TclError: unknown option '-wraplength'" a cada
+        # redimensionamento (ver traceback reportado). A correção mede a
+        # largura real do texto com a fonte do próprio botão e quebra em
+        # duas linhas manualmente quando necessário, sem depender de
+        # nenhuma opção que ttk.Button não suporta.
+        texto_botao_completo = "\u25B6  Executar selecionadas desta categoria"
+        fonte_botao = tkfont.Font(family="Segoe UI", size=11, weight="bold")
+
+        def _ajustar_texto_botao(evento):
+            largura_util = max(evento.width - 20, 60)
+            if fonte_botao.measure(texto_botao_completo) <= largura_util:
+                btn_executar.config(text=texto_botao_completo)
+                return
+            palavras = texto_botao_completo.split(" ")
+            linhas = []
+            linha_atual = ""
+            for palavra in palavras:
+                candidata = f"{linha_atual} {palavra}".strip()
+                if not linha_atual or fonte_botao.measure(candidata) <= largura_util:
+                    linha_atual = candidata
+                else:
+                    linhas.append(linha_atual)
+                    linha_atual = palavra
+            linhas.append(linha_atual)
+            btn_executar.config(text="\n".join(linhas))
+
+        btn_executar.bind("<Configure>", _ajustar_texto_botao)
 
     def _chaves(self):
         return [t.chave for t in self.tarefas]

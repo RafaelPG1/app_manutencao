@@ -267,8 +267,12 @@ class ManutencaoApp:
             meta = next(c for c in CATEGORIAS if c[0] == categoria)
             self.lbl_titulo_topo.config(text=meta[2])
             tarefas = tarefas_por_categoria(categoria)
-            acoes = self._acoes_instantaneas_para(categoria)
-            TaskView(wrapper, self, categoria, tarefas, acoes_instantaneas=acoes).pack(fill="both", expand=True)
+            # As "consultas rápidas" (ações instantâneas) que antes
+            # apareciam aqui foram centralizadas no Dashboard (ver
+            # ui/dashboard.py e consultas_rapidas_para_dashboard) —
+            # não são mais passadas para a TaskView de cada categoria,
+            # para não ficarem duplicadas em dois lugares.
+            TaskView(wrapper, self, categoria, tarefas).pack(fill="both", expand=True)
 
     def _mostrar_tela_execucao(self, wrapper):
         """Cria a tela 'Execução' como uma VIEW que observa o
@@ -510,6 +514,29 @@ class ManutencaoApp:
                 {"icone": "\U0001F4C8", "titulo": "Relatório de eficiência", "comando": self.relatorio_eficiencia},
             ]
         return None
+
+    def consultas_rapidas_para_dashboard(self):
+        """Agrupa, por categoria de origem, todas as consultas/ações
+        instantâneas que antes apareciam dentro da tela de cada
+        categoria (ver `_acoes_instantaneas_para` — continua sendo a
+        única fonte de verdade dessa lista). O Dashboard passou a
+        concentrar essas consultas rápidas (ver ui/dashboard.py); elas
+        não aparecem mais dentro de Manutenção/Limpeza/Diagnóstico/
+        Recuperação, evitando duplicação.
+
+        Retorna uma lista de (titulo_categoria, acoes) — apenas para as
+        categorias que de fato têm alguma ação instantânea."""
+        grupos = []
+        for chave, titulo in (
+            ("manutencao", "Manutenção"),
+            ("limpeza", "Limpeza"),
+            ("diagnostico", "Diagnóstico"),
+            ("recuperacao", "Recuperação"),
+        ):
+            acoes = self._acoes_instantaneas_para(chave)
+            if acoes:
+                grupos.append((titulo, acoes))
+        return grupos
 
     # -------------------- Manutenção: diagnóstico do Windows Update (Fase 5) --------------------
     def diagnostico_windows_update(self):

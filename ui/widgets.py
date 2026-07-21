@@ -225,6 +225,79 @@ def criar_card_estatistica(parent, icone, rotulo, valor, cor_valor=None):
     return card
 
 
+def criar_card_consultas_rapidas(parent, icone, titulo, acoes):
+    """Card usado na seção 'Consultas rápidas' do Dashboard, agrupando
+    as ações instantâneas de uma categoria (ex.: Manutenção, Limpeza)
+    dentro do mesmo padrão visual dos demais cards do app — fundo,
+    borda e hover consistentes com criar_card_estatistica/criar_card_tarefa.
+
+    `acoes` é a mesma lista de dicts {"icone", "titulo", "comando"} já
+    usada antes (vinda de app.consultas_rapidas_para_dashboard()) —
+    nenhum comando é alterado aqui, apenas a apresentação visual: em
+    vez de um botão por ação, cada uma vira uma linha clicável dentro
+    do card, evitando fileiras longas de botões soltos."""
+    card = tk.Frame(parent, bg=COR_BG_CARD, highlightthickness=1,
+                     highlightbackground=COR_BORDA)
+
+    inner = tk.Frame(card, bg=COR_BG_CARD)
+    inner.pack(fill="both", expand=True, padx=16, pady=14)
+
+    cabecalho = tk.Frame(inner, bg=COR_BG_CARD)
+    cabecalho.pack(fill="x", anchor="w")
+    tk.Label(cabecalho, text=icone, bg=COR_BG_CARD, fg=COR_TEXTO,
+              font=("Segoe UI", 13)).pack(side="left")
+    tk.Label(cabecalho, text=titulo, bg=COR_BG_CARD, fg=COR_TEXTO,
+              font=("Segoe UI", 10, "bold")).pack(side="left", padx=(8, 0))
+
+    divisoria = tk.Frame(inner, bg=COR_BORDA, height=1)
+    divisoria.pack(fill="x", pady=(10, 6))
+
+    for acao in acoes:
+        _criar_item_consulta_rapida(inner, acao)
+
+    return card
+
+
+def _criar_item_consulta_rapida(parent, acao):
+    """Uma linha clicável dentro do card de 'Consultas rápidas' —
+    ícone + título da ação + seta indicativa, com hover, chamando
+    exatamente o mesmo `acao['comando']` que antes ficava atrelado a
+    um ttk.Button. O comportamento do clique não muda, só a forma."""
+    item = tk.Frame(parent, bg=COR_BG_CARD, cursor="hand2")
+    item.pack(fill="x", pady=3)
+
+    icone_lbl = tk.Label(item, text=acao["icone"], bg=COR_BG_CARD, fg=COR_TEXTO_FRACO,
+                          font=("Segoe UI", 10), width=2, anchor="w")
+    icone_lbl.pack(side="left")
+
+    texto_lbl = tk.Label(item, text=acao["titulo"], bg=COR_BG_CARD, fg=COR_TEXTO,
+                          font=("Segoe UI", 9), anchor="w", justify="left")
+    texto_lbl.pack(side="left", fill="x", expand=True, padx=(4, 6))
+
+    seta_lbl = tk.Label(item, text="\u203A", bg=COR_BG_CARD, fg=COR_TEXTO_FRACO,
+                         font=("Segoe UI", 11, "bold"))
+    seta_lbl.pack(side="right")
+
+    widgets_linha = [item, icone_lbl, texto_lbl, seta_lbl]
+
+    def hover_on(_e=None):
+        for w in widgets_linha:
+            w.configure(bg=COR_BG_CARD_HOVER)
+
+    def hover_off(_e=None):
+        for w in widgets_linha:
+            w.configure(bg=COR_BG_CARD)
+
+    def clicar(_e=None):
+        acao["comando"]()
+
+    _bind_recursivo(item, "<Button-1>", clicar)
+    _bind_recursivo(item, "<Enter>", hover_on)
+    _bind_recursivo(item, "<Leave>", hover_off)
+
+    return item
+
+
 def criar_painel_em_breve(parent, icone, titulo):
     """Estado vazio para categorias da sidebar que ainda não têm
     tarefas reais implementadas nesta etapa."""

@@ -17,13 +17,22 @@
 # mesma checagem de `winfo_exists()`/`_destruida` antes de tocar em
 # qualquer widget, para o caso de o usuário trocar de categoria antes
 # de a consulta terminar.
+#
+# O DISPARO dessas consultas (quando iniciar, e o que fazer com um
+# resultado que chega atrasado) não é mais decidido pela própria tela
+# — é centralizado em _EstadoConsultasSistema, logo abaixo, para que
+# o histórico de consultas sobreviva a navegações entre categorias e
+# nunca existam duas consultas da mesma seção em andamento ao mesmo
+# tempo (ver o cabeçalho dessa classe para o racional completo).
 # ==========================================================
 
 import threading
 import tkinter as tk
 from tkinter import ttk
 
-from utils.constants import COR_BG_CARD, COR_BORDA, COR_TEXTO, COR_TEXTO_FRACO, COR_OK, COR_AVISO, COR_ERRO
+from utils.constants import (
+    COR_BG, COR_BG_CARD, COR_BORDA, COR_TEXTO, COR_TEXTO_FRACO, COR_OK, COR_AVISO, COR_ERRO,
+)
 from core.sistema.system_info import obter_informacoes_sistema
 from core.sistema.seguranca import obter_status_seguranca
 from core.sistema.rede import obter_informacoes_rede
@@ -38,6 +47,103 @@ def _fmt_gb(valor):
     return f"{valor:.1f} GB".replace(".", ",")
 
 
+# ==========================================================
+# Estado das consultas da tela Sistema — vive no MÓDULO, fora de
+# qualquer instância de SistemaView, seguindo o mesmo princípio já
+# usado em core/execution/execution_manager.py: o estado é dono de
+# si mesmo, e a tela (recriada a cada navegação) apenas OBSERVA.
+#
+# Isso resolve os três problemas relatados na navegação:
+#   - a tela "esquecia" tudo e voltava a mostrar "Consultando..." a
+#     cada visita -> agora o último resultado conhecido de cada
+#     seção fica em cache e é aplicado IMEDIATAMENTE ao reabrir a
+#     tela, antes mesmo de qualquer nova consulta terminar;
+#   - visitas rápidas (entrar/sair/entrar) disparavam várias
+#     consultas da MESMA seção ao mesmo tempo, competindo por CPU e
+#     fazendo a tela atualizar fora de ordem -> agora existe no
+#     máximo uma consulta em andamento por seção, controlada por
+#     `em_andamento`;
+#   - o resultado de uma consulta iniciada por uma visita anterior
+#     podia chegar depois que o usuário já tinha saído e voltado ->
+#     agora o resultado é sempre entregue à instância de SistemaView
+#     que estiver ativa NO MOMENTO em que a consulta termina (ou
+#     descartado, se a tela Sistema não estiver aberta), nunca à
+#     instância antiga que a originou.
+# ==========================================================
+class _EstadoConsultasSistema:
+    SECOES = ("sistema", "seguranca", "rede", "hardware", "processos")
+
+    def __init__(self):
+        self.cache = {chave: None for chave in self.SECOES}
+        self.em_andamento = {chave: False for chave in self.SECOES}
+        self._view_ativa = None
+
+    def registrar_view_ativa(self, view):
+        self._view_ativa = view
+
+    def desregistrar_view_ativa(self, view):
+        if self._view_ativa is view:
+            self._view_ativa = None
+
+    def consultar(self, chave, funcao_consulta, aplicar_callback):
+        """Aplica imediatamente o último resultado conhecido (se
+        houver) e, se não houver nenhuma consulta desta seção já em
+        andamento, dispara uma nova em segundo plano para atualizar o
+        cache. O resultado da consulta é entregue a quem quer que
+        seja a view ativa quando ela terminar — nunca à view que a
+        disparou, caso essa já não seja mais a atual."""
+        if self.cache[chave] is not None:
+            aplicar_callback(self.cache[chave])
+
+        if self.em_andamento[chave]:
+            return
+        self.em_andamento[chave] = True
+
+        def alvo():
+            resultado = funcao_consulta()
+            self.cache[chave] = resultado
+            self.em_andamento[chave] = False
+            view = self._view_ativa
+            if view is not None:
+                view._apos(lambda: aplicar_callback(resultado))
+
+        threading.Thread(target=alvo, daemon=True).start()
+
+
+_estado_consultas = _EstadoConsultasSistema()
+
+# Estilo discreto da scrollbar da tela Sistema — registrado uma única
+# vez por processo, mesmo princípio já usado em ui/task_view.py
+# (_garantir_estilo_scroll), mas com nome de estilo próprio para não
+# acoplar os dois módulos.
+_ESTILO_SCROLL_CONFIGURADO = False
+
+
+def _garantir_estilo_scroll():
+    global _ESTILO_SCROLL_CONFIGURADO
+    if _ESTILO_SCROLL_CONFIGURADO:
+        return
+    try:
+        style = ttk.Style()
+        style.configure(
+            "Sistema.Vertical.TScrollbar",
+            background=COR_BG_CARD,
+            troughcolor=COR_BG,
+            bordercolor=COR_BG,
+            arrowcolor=COR_TEXTO_FRACO,
+            relief="flat",
+            borderwidth=0,
+            width=10,
+        )
+        style.map(
+            "Sistema.Vertical.TScrollbar",
+            background=[("active", COR_BORDA), ("!active", COR_BG_CARD)],
+        )
+    except Exception:
+        pass
+    _ESTILO_SCROLL_CONFIGURADO = True
+
+
 class SistemaView(ttk.Frame):
     def __init__(self, parent, app):
         """app: referência ao ManutencaoApp — usada só para agendar o
@@ -50,15 +156,20 @@ class SistemaView(ttk.Frame):
         self.bind("<Destroy>", self._ao_destruir)
         self._montar()
 
-        for alvo in (
-            self._consultar_thread, self._consultar_seguranca_thread,
-            self._consultar_rede_thread, self._consultar_hardware_thread,
-            self._consultar_processos_thread,
-        ):
-            threading.Thread(target=alvo, daemon=True).start()
+        # Esta view passa a ser a "ativa": qualquer resultado que
+        # chegue de agora em diante (mesmo de uma consulta iniciada por
+        # uma visita anterior já destruída) é entregue a ela.
+        _estado_consultas.registrar_view_ativa(self)
+
+        _estado_consultas.consultar("sistema", obter_informacoes_sistema, self._aplicar)
+        _estado_consultas.consultar("seguranca", obter_status_seguranca, self._aplicar_seguranca)
+        _estado_consultas.consultar("rede", obter_informacoes_rede, self._aplicar_rede)
+        _estado_consultas.consultar("hardware", obter_uso_hardware, self._aplicar_hardware)
+        _estado_consultas.consultar("processos", obter_processos_top, self._aplicar_processos)
 
     def _ao_destruir(self, _evento=None):
         self._destruida = True
+        _estado_consultas.desregistrar_view_ativa(self)
 
     def _apos(self, callback):
         """Agenda `callback` na thread principal, só se a view ainda
@@ -69,12 +180,15 @@ class SistemaView(ttk.Frame):
 
     # ==================== Montagem ====================
     def _montar(self):
+        self._montar_area_scroll()
+        conteudo = self.conteudo  # todo o conteúdo abaixo mora dentro da área rolável
+
         criar_cabecalho_secao(
-            self, "\U0001F5A5", "Sistema",
+            conteudo, "\U0001F5A5", "Sistema",
             "Informações do computador — consultado via WMI/CIM/PowerShell oficial do Windows",
         )
 
-        grade = ttk.Frame(self)
+        grade = ttk.Frame(conteudo)
         grade.pack(fill="x")
         for col in range(4):
             grade.columnconfigure(col, weight=1, uniform="sysstat")
@@ -94,24 +208,24 @@ class SistemaView(ttk.Frame):
             card.grid(row=i // 4, column=i % 4, sticky="nsew", padx=(0 if i % 4 == 0 else 10, 0), pady=(0, 10))
             self.cards[chave] = card
 
-        criar_cabecalho_secao(self, "\U0001F4BD", "Discos instalados")
-        self.frame_discos = ttk.Frame(self)
+        criar_cabecalho_secao(conteudo, "\U0001F4BD", "Discos instalados")
+        self.frame_discos = ttk.Frame(conteudo)
         self.frame_discos.pack(fill="x")
         self._label_status(self.frame_discos, "Consultando...")
 
         # -------- Fase 4 --------
-        criar_cabecalho_secao(self, "\U0001F512", "Segurança")
-        self.frame_seguranca = ttk.Frame(self)
+        criar_cabecalho_secao(conteudo, "\U0001F512", "Segurança")
+        self.frame_seguranca = ttk.Frame(conteudo)
         self.frame_seguranca.pack(fill="x")
         self._label_status(self.frame_seguranca, "Consultando...")
 
-        criar_cabecalho_secao(self, "\U0001F310", "Rede")
-        self.frame_rede = ttk.Frame(self)
+        criar_cabecalho_secao(conteudo, "\U0001F310", "Rede")
+        self.frame_rede = ttk.Frame(conteudo)
         self.frame_rede.pack(fill="x")
         self._label_status(self.frame_rede, "Consultando...")
 
-        criar_cabecalho_secao(self, "\U0001F4CA", "Uso de hardware")
-        grade_hw = ttk.Frame(self)
+        criar_cabecalho_secao(conteudo, "\U0001F4CA", "Uso de hardware")
+        grade_hw = ttk.Frame(conteudo)
         grade_hw.pack(fill="x")
         for col in range(3):
             grade_hw.columnconfigure(col, weight=1, uniform="hwstat")
@@ -131,10 +245,81 @@ class SistemaView(ttk.Frame):
         tk.Label(self.frame_disco_uso_linhas, text="Consultando...", bg=COR_BG_CARD, fg=COR_TEXTO,
                  font=("Segoe UI", 9, "bold")).pack(anchor="w")
 
-        criar_cabecalho_secao(self, "\U0001F4C8", "Processos que mais consomem")
-        self.frame_processos = ttk.Frame(self)
+        criar_cabecalho_secao(conteudo, "\U0001F4C8", "Processos que mais consomem")
+        self.frame_processos = ttk.Frame(conteudo)
         self.frame_processos.pack(fill="x")
         self._label_status(self.frame_processos, "Consultando...")
+
+    # -------------------- Área de scroll (tela inteira) --------------------
+    def _montar_area_scroll(self):
+        """Envolve toda a tela Sistema numa área rolável — o conteúdo é
+        extenso (informações gerais, discos, segurança, rede, hardware
+        e processos) e não cabe confortavelmente em resoluções
+        menores. Mesma técnica de canvas + scrollbar discreta já usada
+        em ui/task_view.py (_montar_area_scroll): a barra só aparece
+        quando o conteúdo realmente não cabe, e a rolagem pelo mouse
+        só é ativa enquanto o cursor está sobre a área."""
+        _garantir_estilo_scroll()
+
+        canvas_frame = ttk.Frame(self)
+        canvas_frame.pack(fill="both", expand=True)
+
+        canvas = tk.Canvas(canvas_frame, bg=COR_BG, highlightthickness=0, bd=0)
+        scrollbar = ttk.Scrollbar(
+            canvas_frame, orient="vertical", command=canvas.yview,
+            style="Sistema.Vertical.TScrollbar",
+        )
+        self.conteudo = ttk.Frame(canvas)
+
+        janela_id = canvas.create_window((0, 0), window=self.conteudo, anchor="nw")
+        canvas.configure(yscrollcommand=scrollbar.set)
+        canvas.pack(side="left", fill="both", expand=True)
+
+        self._scrollbar_visivel = False
+
+        def _atualizar_necessidade_scroll():
+            if not canvas.winfo_exists():
+                return
+            altura_conteudo = self.conteudo.winfo_reqheight()
+            altura_visivel = canvas.winfo_height()
+            precisa_scroll = altura_conteudo > altura_visivel
+
+            if precisa_scroll and not self._scrollbar_visivel:
+                scrollbar.pack(side="right", fill="y")
+                self._scrollbar_visivel = True
+            elif not precisa_scroll and self._scrollbar_visivel:
+                scrollbar.pack_forget()
+                self._scrollbar_visivel = False
+
+            if not precisa_scroll:
+                canvas.yview_moveto(0)
+
+        def _atualizar_scrollregion(_evento=None):
+            canvas.configure(scrollregion=canvas.bbox("all"))
+            _atualizar_necessidade_scroll()
+
+        def _ajustar_largura_interna(evento):
+            canvas.itemconfig(janela_id, width=evento.width)
+            _atualizar_necessidade_scroll()
+
+        self.conteudo.bind("<Configure>", _atualizar_scrollregion)
+        canvas.bind("<Configure>", _ajustar_largura_interna)
+
+        def _on_scroll(event):
+            if canvas.winfo_exists() and self._scrollbar_visivel:
+                canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+
+        def _vincular_scroll(_e=None):
+            canvas.bind_all("<MouseWheel>", _on_scroll)
+
+        def _desvincular_scroll(_e=None):
+            canvas.unbind_all("<MouseWheel>")
+
+        canvas.bind("<Enter>", _vincular_scroll)
+        canvas.bind("<Leave>", _desvincular_scroll)
+        canvas.bind("<Destroy>", _desvincular_scroll)
+
+        self.after_idle(_atualizar_scrollregion)
 
     def _label_status(self, parent, texto, cor=None):
         lbl = ttk.Label(parent, text=texto, style="Status.TLabel")
@@ -148,10 +333,6 @@ class SistemaView(ttk.Frame):
             w.destroy()
 
     # ==================== Seção original (Fase 1) ====================
-    def _consultar_thread(self):
-        info = obter_informacoes_sistema()
-        self._apos(lambda: self._aplicar(info))
-
     def _aplicar(self, info: dict):
         if self._destruida or not self.winfo_exists():
             return
@@ -202,10 +383,6 @@ class SistemaView(ttk.Frame):
             ttk.Label(linha, text=texto, style="Status.TLabel").pack(anchor="w")
 
     # ==================== Segurança (Fase 4) ====================
-    def _consultar_seguranca_thread(self):
-        info = obter_status_seguranca()
-        self._apos(lambda: self._aplicar_seguranca(info))
-
     def _aplicar_seguranca(self, info: dict):
         if self._destruida or not self.winfo_exists():
             return
@@ -265,10 +442,6 @@ class SistemaView(ttk.Frame):
             ttk.Label(linha_frame, text=f"  {texto}", style="Status.TLabel", foreground=cor).pack(side="left")
 
     # ==================== Rede (Fase 4) ====================
-    def _consultar_rede_thread(self):
-        info = obter_informacoes_rede()
-        self._apos(lambda: self._aplicar_rede(info))
-
     def _aplicar_rede(self, info: dict):
         if self._destruida or not self.winfo_exists():
             return
@@ -303,10 +476,6 @@ class SistemaView(ttk.Frame):
                 ttk.Label(self.frame_rede, text=texto, style="Status.TLabel", foreground=cor).pack(anchor="w")
 
     # ==================== Hardware (Fase 4) ====================
-    def _consultar_hardware_thread(self):
-        info = obter_uso_hardware()
-        self._apos(lambda: self._aplicar_hardware(info))
-
     def _aplicar_hardware(self, info: dict):
         if self._destruida or not self.winfo_exists():
             return
@@ -346,10 +515,6 @@ class SistemaView(ttk.Frame):
         return COR_OK
 
     # ==================== Processos (Fase 4) ====================
-    def _consultar_processos_thread(self):
-        info = obter_processos_top()
-        self._apos(lambda: self._aplicar_processos(info))
-
     def _aplicar_processos(self, info: dict):
         if self._destruida or not self.winfo_exists():
             return

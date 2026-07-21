@@ -26,3 +26,27 @@ NÆo foi poss¡vel abrir a sessÆo ETW de Diagn¢stico de Eficiˆncia de Consumo
 [REL_EFICIENCIA] Iniciado em 20/07/2026 08:50:48
 [REL_EFICIENCIA] SUCESSO - C:\Users\Rafae\Documents\RelatoriosManutencao\relatorio_eficiencia.html - 20/07/2026 08:50:56
 [REL_ENERGIA] SUCESSO - C:\Users\Rafae\Documents\RelatoriosManutencao\relatorio_energia.html - 20/07/2026 08:51:27
+
+=======================================================
+ Nova sessão: 20/07/2026 18:48:02
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+
+=======================================================
+ Nova sessão: 21/07/2026 15:40:07
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+
+=======================================================
+ Nova sessão: 21/07/2026 16:07:59
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
+
+=======================================================
+ Nova sessão: 21/07/2026 16:21:26
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD
