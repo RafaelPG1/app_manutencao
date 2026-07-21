@@ -10,6 +10,12 @@
 # A leitura do log é rápida (arquivo de texto local) e acontece de
 # forma síncrona ao montar a tela, sem necessidade de thread — mesma
 # escolha já usada pela ação instantânea "Ver espaço em disco".
+#
+# Fase 8: a quantidade de lotes exibidos passou a respeitar a
+# preferência "max_registros_historico" (tela Configurações), lida
+# através do MESMO parâmetro `limite` que ler_historico() já aceitava
+# — nenhuma mudança de formato ou de armazenamento, só deixou de usar
+# sempre o valor padrão (50) fixo.
 # ==========================================================
 
 import tkinter as tk
@@ -19,6 +25,7 @@ from utils.constants import (
     COR_BG, COR_BG_CARD, COR_BORDA, COR_TEXTO, COR_TEXTO_FRACO, COR_OK, COR_ERRO,
 )
 from utils.logger import ler_historico
+from utils.settings import carregar_configuracoes
 from ui.widgets import criar_cabecalho_secao, criar_painel_em_breve
 
 _ICONE_ESTADO = {"concluida": ("\u2714", COR_OK), "erro": ("\u2716", COR_ERRO)}
@@ -46,7 +53,8 @@ class HistoricoView(ttk.Frame):
             "Execuções em lote anteriores, mais recente primeiro",
         )
 
-        lotes = ler_historico()
+        limite = carregar_configuracoes().get("max_registros_historico", 50)
+        lotes = ler_historico(limite=limite)
         if not lotes:
             criar_painel_em_breve(self, "\U0001F4DC", "Nenhuma execução registrada ainda")
             return

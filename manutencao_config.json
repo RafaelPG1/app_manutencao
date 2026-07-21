@@ -1,0 +1,6 @@
+{
+  "confirmar_antes_executar": true,
+  "abrir_ultima_categoria": false,
+  "ultima_categoria": "configuracoes",
+  "max_registros_historico": 50
+}

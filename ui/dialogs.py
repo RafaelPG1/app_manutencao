@@ -63,3 +63,16 @@ def informar_local_log(log_file: str, erro: Exception = None):
             f"O log fica em:\n{log_file}\n\n"
             f"(Não foi possível abrir a pasta automaticamente: {erro})"
         )
+
+
+def confirmar_limpar_historico_logs() -> bool:
+    """Histórico e logs são gravados no mesmo arquivo (ver
+    utils/logger.py) — por isso a tela de Configurações tem uma única
+    ação para os dois, em vez de dois botões que fariam exatamente a
+    mesma coisa com nomes diferentes."""
+    return messagebox.askyesno(
+        "Limpar histórico e logs",
+        "Isto vai apagar TODO o histórico de execuções e os logs salvos até agora.\n\n"
+        "Esta ação não pode ser desfeita. Deseja continuar?",
+        icon="warning",
+    )

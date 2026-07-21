@@ -78,6 +78,31 @@ def log(msg: str):
         print(f"[AVISO] Falha ao gravar log: {e}")
 
 
+def limpar_log() -> bool:
+    """Apaga o conteúdo do LOGFILE e recomeça com um cabeçalho novo,
+    no mesmo formato usado por log_init().
+
+    Usado pela tela de Configurações ("Limpar histórico e logs" —
+    Fase 8). Como ler_historico() reconstrói o Histórico a partir
+    deste MESMO arquivo (ver comentário abaixo), não existem dois
+    armazenamentos separados: limpar o log também limpa o histórico,
+    e vice-versa — por isso uma única função cobre as duas ações da
+    tela de Configurações.
+
+    Nunca lança exceção — mesma postura do resto deste módulo.
+    Retorna True/False para a tela decidir a mensagem exibida."""
+    try:
+        with _lock_log:
+            os.makedirs(os.path.dirname(LOGFILE), exist_ok=True)
+            with open(LOGFILE, "w", encoding="utf-8") as f:
+                f.write("=" * 55 + "\n LOG DE MANUTENÇÃO DO SISTEMA\n")
+                f.write(f" Limpo em: {agora()}\n" + "=" * 55 + "\n\n")
+        return True
+    except Exception as e:
+        print(f"[AVISO] Não foi possível limpar o log em {LOGFILE}: {e}")
+        return False
+
+
 # ==========================================================
 # Leitura estruturada do histórico (tela "Histórico")
 #

@@ -60,3 +60,9 @@ NÆo foi poss¡vel abrir a sessÆo ETW de Diagn¢stico de Eficiˆncia de Consumo
 [FERRAMENTAS] gerenciamento_disco aberta em 21/07/2026 16:38:05
 [FERRAMENTAS] visualizador_eventos aberta em 21/07/2026 16:38:42
 [FERRAMENTAS] msconfig aberta em 21/07/2026 16:40:21
+
+=======================================================
+ Nova sessão: 21/07/2026 16:54:42
+=======================================================
+
+[INFO] Tipo de disco detectado: SSD

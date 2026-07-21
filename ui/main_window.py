@@ -43,7 +43,8 @@ from utils.constants import (
 )
 from utils.tasks import TAREFAS, tarefas_por_categoria
 from utils.helpers import agora
-from utils.logger import LOGFILE, log, log_init
+from utils.logger import LOGFILE, log, log_init, limpar_log
+from utils.settings import carregar_configuracoes, salvar_configuracoes
 
 from core.shared.admin import is_admin, relaunch_as_admin
 from core.shared.disk_info import detectar_tipo_disco
@@ -96,6 +97,7 @@ from ui.execution_panel import ExecutionPanel
 from ui.sistema_view import SistemaView
 from ui.historico_view import HistoricoView
 from ui.ferramentas_view import FerramentasView
+from ui.configuracoes_view import ConfiguracoesView
 from ui.resultado_window import exibir_resultado
 
 
@@ -118,7 +120,14 @@ class ManutencaoApp:
         self.root.protocol("WM_DELETE_WINDOW", self._ao_fechar_app)
 
         self.disco_tipo = "detectando..."
-        self.categoria_atual = "dashboard"
+
+        # Preferências do aplicativo (Fase 8 — tela Configurações),
+        # carregadas uma vez aqui e mantidas em memória durante toda a
+        # sessão; cada alteração feita na tela é persistida de volta
+        # via self.atualizar_configuracao() (ver utils/settings.py).
+        self.configuracoes = carregar_configuracoes()
+
+        self.categoria_atual = self._categoria_inicial()
         self.vars_tarefas = {t.chave: tk.BooleanVar(value=False) for t in self.TAREFAS}
 
         # Controlador global da execução — vive durante toda a vida do
@@ -135,6 +144,43 @@ class ManutencaoApp:
         self._configurar_estilo()
         self._montar_ui()
         self.root.after(150, self._inicializar)
+
+    # -------------------- Preferências (Fase 8) --------------------
+    def _categoria_inicial(self) -> str:
+        """Decide a categoria com que o app abre, respeitando a
+        preferência "Abrir sempre na última categoria utilizada". Por
+        padrão (ou se a preferência estiver desligada) continua sendo
+        sempre "dashboard", exatamente como antes da Fase 8."""
+        if not self.configuracoes.get("abrir_ultima_categoria"):
+            return "dashboard"
+        candidata = self.configuracoes.get("ultima_categoria", "dashboard")
+        chaves_validas = {c[0] for c in CATEGORIAS}
+        return candidata if candidata in chaves_validas else "dashboard"
+
+    def atualizar_configuracao(self, chave: str, valor):
+        """Atualiza uma preferência em memória e persiste imediatamente
+        — chamado pela tela de Configurações a cada alteração
+        (checkbox, campo numérico etc.), sem exigir um botão "Salvar"
+        separado."""
+        self.configuracoes[chave] = valor
+        salvar_configuracoes(self.configuracoes)
+
+    def limpar_historico_logs(self):
+        """Ação "Limpar histórico e logs" da tela de Configurações.
+        Histórico e logs vivem no mesmo arquivo (ver utils/logger.py),
+        então uma única confirmação e uma única limpeza cobrem os
+        dois."""
+        if not dialogs.confirmar_limpar_historico_logs():
+            return
+        if limpar_log():
+            messagebox.showinfo("Limpar histórico e logs", "Histórico e logs foram apagados.")
+            if self.categoria_atual == "historico":
+                self.navegar_para("historico")
+        else:
+            messagebox.showerror(
+                "Limpar histórico e logs",
+                "Não foi possível limpar o arquivo de log. Veja o console para detalhes.",
+            )
 
     # -------------------- ESTILO --------------------
     def _configurar_estilo(self):
@@ -209,7 +255,7 @@ class ManutencaoApp:
         # painel de execução: só existe enquanto a tela "Execução" está aberta
         self.execution_panel = None
 
-        self.navegar_para("dashboard")
+        self.navegar_para(self.categoria_atual)
 
     # -------------------- Navegação --------------------
     def _limpar_conteudo(self):
@@ -234,6 +280,12 @@ class ManutencaoApp:
         if categoria in self.sidebar.botoes:
             self.sidebar.definir_ativo(categoria)
         self._limpar_conteudo()
+
+        # "execucao" é uma tela transitória (ver comentário no topo do
+        # arquivo) — não faz sentido como ponto de partida ao reabrir
+        # o app, então não é gravada como "última categoria".
+        if categoria != "execucao":
+            self.atualizar_configuracao("ultima_categoria", categoria)
 
         # O texto de tarefa atual (ex.: "[1/1] Verificar arquivos do
         # sistema") é exclusivo da tela "Execução". Em qualquer outra
@@ -264,6 +316,9 @@ class ManutencaoApp:
         elif categoria == "ferramentas":
             self.lbl_titulo_topo.config(text="Ferramentas")
             FerramentasView(wrapper, self).pack(fill="both", expand=True)
+        elif categoria == "configuracoes":
+            self.lbl_titulo_topo.config(text="Configurações")
+            ConfiguracoesView(wrapper, self).pack(fill="both", expand=True)
         elif categoria in CATEGORIAS_EM_BREVE:
             meta = next(c for c in CATEGORIAS if c[0] == categoria)
             self.lbl_titulo_topo.config(text=meta[2])
@@ -796,8 +851,9 @@ class ManutencaoApp:
         if "chkdsk" in selecionadas and self.disco_tipo.upper() == "HDD":
             usar_r = dialogs.perguntar_chkdsk_r()
 
-        if not dialogs.confirmar_execucao(len(selecionadas)):
-            return
+        if self.configuracoes.get("confirmar_antes_executar", True):
+            if not dialogs.confirmar_execucao(len(selecionadas)):
+                return
 
         titulos_por_chave = {t.chave: t.titulo for t in self.TAREFAS}
 

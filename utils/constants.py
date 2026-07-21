@@ -47,9 +47,11 @@ CATEGORIAS = [
 # conjunto na Fase 1 do roadmap — passaram a ter telas próprias (ver
 # ui/sistema_view.py e ui/historico_view.py). "ferramentas" saiu
 # nesta etapa (Fase 7) — ver ui/ferramentas_view.py e
-# core/ferramentas/utilitarios_windows.py. Fora do escopo: apenas
-# "configuracoes" continua reservada para o futuro.
-CATEGORIAS_EM_BREVE = {"configuracoes"}
+# core/ferramentas/utilitarios_windows.py. "configuracoes" saiu nesta
+# etapa (Fase 8) — passou a ter tela própria (ver
+# ui/configuracoes_view.py). Fora do escopo: nenhuma categoria
+# restante está reservada para o futuro no momento.
+CATEGORIAS_EM_BREVE = set()
 
 
 # ---------------- TAREFAS DISPONÍVEIS ----------------
