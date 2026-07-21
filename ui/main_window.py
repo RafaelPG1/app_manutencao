@@ -76,6 +76,7 @@ from core.recuperacao.driver_backup import fazer_backup_drivers
 from core.recuperacao.relatorios_powercfg import (
     gerar_relatorio_bateria, gerar_relatorio_energia, gerar_relatorio_eficiencia,
 )
+from core.ferramentas.utilitarios_windows import abrir_ferramenta as abrir_ferramenta_windows
 from core.laboratorio.rapido import teste_rapido
 from core.laboratorio.medio import teste_medio
 from core.laboratorio.longo import teste_longo
@@ -94,6 +95,7 @@ from ui.task_view import TaskView
 from ui.execution_panel import ExecutionPanel
 from ui.sistema_view import SistemaView
 from ui.historico_view import HistoricoView
+from ui.ferramentas_view import FerramentasView
 from ui.resultado_window import exibir_resultado
 
 
@@ -259,6 +261,9 @@ class ManutencaoApp:
         elif categoria == "historico":
             self.lbl_titulo_topo.config(text="Histórico")
             HistoricoView(wrapper, self).pack(fill="both", expand=True)
+        elif categoria == "ferramentas":
+            self.lbl_titulo_topo.config(text="Ferramentas")
+            FerramentasView(wrapper, self).pack(fill="both", expand=True)
         elif categoria in CATEGORIAS_EM_BREVE:
             meta = next(c for c in CATEGORIAS if c[0] == categoria)
             self.lbl_titulo_topo.config(text=meta[2])
@@ -751,7 +756,7 @@ class ManutencaoApp:
 
     def _exibir_resultado_simples(self, titulo: str, resultado: dict):
         """Mostra o resultado {"sucesso": bool, "mensagem": str} de uma
-        ação instantânea da categoria Recuperação numa messagebox
+        ação instantânea (Recuperação ou Ferramentas) numa messagebox
         simples — as mensagens dessas ações são curtas (um parágrafo),
         diferente das consultas de Diagnóstico (SMART, eventos,
         espaço em disco), que usam ui/resultado_window.py por
@@ -761,6 +766,17 @@ class ManutencaoApp:
             messagebox.showinfo(titulo, resultado["mensagem"])
         else:
             messagebox.showerror(titulo, resultado["mensagem"])
+
+    # -------------------- Ferramentas: abrir utilitário nativo (Fase 7) --------------------
+    def abrir_ferramenta(self, chave: str):
+        """chave: identifica a ferramenta em
+        core/ferramentas/utilitarios_windows.py:FERRAMENTAS. Cada
+        clique só abre a ferramenta nativa do Windows (nenhuma lógica
+        de manutenção própria) — mesmo padrão de restaurar_sistema()
+        para a categoria Recuperação, reaproveitando o mesmo helper de
+        exibição de resultado."""
+        resultado = abrir_ferramenta_windows(chave)
+        self._exibir_resultado_simples("Ferramentas", resultado)
 
     # -------------------- Execução em lote --------------------
     def executar_selecionadas(self):

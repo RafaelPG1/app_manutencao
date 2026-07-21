@@ -44,11 +44,12 @@ CATEGORIAS = [
 # Categorias que ainda não possuem tarefas reais implementadas.
 # A tela dessas categorias mostra um estado "em breve" em vez de
 # funcionalidades novas. "sistema" e "historico" saíram deste
-# conjunto nesta etapa (Fase 1 do roadmap) — passaram a ter telas
-# próprias (ver ui/sistema_view.py e ui/historico_view.py). Fora do
-# escopo desta etapa: "ferramentas" e "configuracoes" continuam
-# reservadas para o futuro.
-CATEGORIAS_EM_BREVE = {"ferramentas", "configuracoes"}
+# conjunto na Fase 1 do roadmap — passaram a ter telas próprias (ver
+# ui/sistema_view.py e ui/historico_view.py). "ferramentas" saiu
+# nesta etapa (Fase 7) — ver ui/ferramentas_view.py e
+# core/ferramentas/utilitarios_windows.py. Fora do escopo: apenas
+# "configuracoes" continua reservada para o futuro.
+CATEGORIAS_EM_BREVE = {"configuracoes"}
 
 
 # ---------------- TAREFAS DISPONÍVEIS ----------------
